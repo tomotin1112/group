@@ -1,0 +1,34 @@
+#main {
+    p {
+        font-size: 20px;
+    }
+}
+
+.cont {
+    width: 250px;
+    height: 200px;
+}
+
+#page-menu {
+    width: 80%;
+    height: auto;
+
+    margin: 100px auto 0 auto;
+}
+
+#left {
+    width: 64%;
+    float: left;
+    #rank {
+        float: left;
+        
+    }
+    #top {
+        float: right;
+    }
+}
+
+#prof {
+    width: 30%;
+    float: right;
+}

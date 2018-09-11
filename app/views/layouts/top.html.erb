@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <%=csrf_meta_tags%>
+  <%= stylesheet_link_tag 'base',media: 'all','data-turbo-link':'reload'%>
+  <%= stylesheet_link_tag 'top' ,media: 'all','data-turbo-link':'reload'%>
+  <title>Nikki</title>
+</head>
+<body>
+<%=yield%>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <%=csrf_meta_tags%>
+  <%= stylesheet_link_tag 'base',media: 'all','data-turbo-link':'reload'%>
+  <%= stylesheet_link_tag 'reg',media: 'all','data-turbo-link':'reload'%>
+  <% case @style%>
+    <% when "2"%>
+      <%= stylesheet_link_tag 'reg2',media: 'all','data-turbo-link':'reload'%>
+    <% when "3"%>
+      <%= stylesheet_link_tag 'reg3',media: 'all','data-turbo-link':'reload'%>
+    <% when "4"%>
+      <%= stylesheet_link_tag 'reg4',media: 'all','data-turbo-link':'reload'%>
+    <% when "5"%>
+    <%= stylesheet_link_tag 'reg3',media: 'all','data-turbo-link':'reload'%>
+      <%= stylesheet_link_tag 'reg5',media: 'all','data-turbo-link':'reload'%>
+    <% when "6"%>
+      <%= stylesheet_link_tag 'reg6',media: 'all','data-turbo-link':'reload'%>
+  <%end%>
+  <title>Nikki</title>
+</head>
+<body>
+<%=render template: 'layouts/register_header'%>
+<%=yield%>
+</body>
+</html>

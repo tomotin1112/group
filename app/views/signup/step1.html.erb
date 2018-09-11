@@ -1,0 +1,19 @@
+<div id="menu">
+  <p>会員登録手続きの手順</p>
+  <%=image_tag 'reg1.png'%>
+</div>
+<div id="main">
+  <p>
+    Nikkiへようこそ！<br>
+    メールアドレスを入力して「送信」ボタンを押してください。<br>
+    登録のご案内メールをお送り致します。
+  </p>
+  <h3><%= flash[:notice]%></h3>
+  <%=form_tag(controller: 'signup', action: 'step2') do%>
+    <div id="input">
+      <%=label_tag('address',text="メールアドレス")%>
+      <%=text_field_tag('address','',id:'address')%>
+    </div>
+    <%=submit_tag('送信',id:"submit")%>
+  <%end%>
+</div>

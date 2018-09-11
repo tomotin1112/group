@@ -1,0 +1,13 @@
+<div id="menu">
+  <p>会員登録手続きの手順</p>
+  <%=image_tag 'reg4.png'%>
+</div>
+<div id="main">
+  <%=flash[:notice]%>
+  <iframe src="/signup/kiyaku.html" scrolling="auto"></iframe>
+  <%=form_tag(controller: 'signup',action: 'step4') do%>
+    <%=check_box_tag('checkbox')%>
+    <%=label_tag('checkbox',text="上記の規約に同意する")%><br>
+    <%=submit_tag('>確認画面',:id=>'submit')%>
+  <%end%>
+</div>

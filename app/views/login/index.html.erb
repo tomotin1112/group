@@ -1,0 +1,39 @@
+<div id="left">
+  <%= form_tag(controller: 'login',action: 'auth') do%>
+    <%=label_tag('address',text="メールアドレス")%>
+    <%= text_field_tag('address')%>
+    <%=label_tag('password',text="パスワード")%>
+    <%= password_field_tag('password')%>
+    <%= submit_tag('ログイン')%>
+    <%=flash[:error]%>
+  <%end%>
+  <p><br>アカウントをお持ちでないですか？<%=link_to("登録する",'/signup') %></p>
+
+</div>
+
+<div id="right">
+  <p>
+    目に見えるものが真実とは限らない。<br>
+    モナリザは、本当に微笑んでいるのか。<br>
+    写楽は、日本人だったのか。<br>
+    ナスカの地上絵は、本当に人間が描いたのか。<br>
+    <font color="yellow">Nikki</font>の世界へようこそ。
+  </p>
+</div>
+<div id="images">
+  <%= image_tag('1.jpg',:alt=>"画僧",:style => 'border 0')%>
+  <%= image_tag('2.jpg',:alt=>"画僧",:style => 'border 0')%>
+  <%= image_tag('3.jpg',:alt=>"画僧",:style => 'border 0')%>
+  <%= image_tag('4.jpg',:alt=>"画僧",:style => 'border 0')%>
+</div>
+<hr>
+<footer>
+  <ul>
+    <li><a href="">Nikkiについて</a></li>
+    <li><a href="">ヘルプ</a></li>
+    <li><a href="">利用規約</a></li>
+    <li><a href="">開発者</a></li>
+    <li><a href="">設定</a></li>
+    <li>©2018Nikki</li>
+  </ul>
+</footer>

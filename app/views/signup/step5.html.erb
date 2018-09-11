@@ -1,0 +1,52 @@
+<div id="menu">
+  <p>会員登録手続きの手順</p>
+  <%=image_tag 'reg5.png'%>
+</div>
+<div id="main">
+  <div id="form">
+    <div id="g">
+    <%=image_tag 'pen.png'%><strong>登録情報の入力</strong>
+    </div>
+    <%=form_tag(controller: 'signup',action: 'step5') do%>
+      <ul>
+        <li>
+          <%=label_tag('address',text="メールアドレス") %>
+          <%= text_field_tag('address',value=session[:address],:readonly=>true)%>
+        </li>
+        <li>
+          <%=label_tag('password',text="パスワード")%>
+          <%=password_field_tag('password',value="000000",:readonly=>true)%>
+        </li>
+        <li>
+          <%=label_tag('userid',text="ユーザーID") %>
+          <%= text_field_tag('userid',value=session[:userid],:readonly=>true)%>
+        </li>
+        <li>
+          <%=label_tag('accountname',text="アカウント名") %>
+          <%= text_field_tag('accountname',value=session[:accountname],:readonly=>true)%>
+        </li>
+        <li>
+          <%=label_tag('year',text="生年月日") %>
+          <%=text_field_tag('birthday', value=session[:year]+"-"+session[:month]+"-"+session[:day]) %>
+          <!--<%=number_field_tag('year',session[:year],:size=>4,:max_length=>4,:min_length=>4,:readonly=>true)%>年
+          <%=number_field_tag('month',session[:month],:size=>2,:max_length=>2,:min_length=>1,:readonly=>true)%>月
+          <%=number_field_tag('day',session[:day],:size=>2,:max_length=>2,:min_length=>1,:readonly=>true)%>日-->
+        </li>
+        <li>
+          <%=label_tag('gender',text="性別") %>
+          <%if session[:gender]=="0"%>
+            <%= text_field_tag('gender',value="男性",:readonly=>true)%>
+          <%else if session[:gender]=="1"%>
+              <%= text_field_tag('gender',value="女性",:readonly=>true)%>
+            <%else if session[:gender]=="2"%>
+              <%= text_field_tag('gender',value="その他",:readonly=>true)%>
+                <%end%>
+            <%end%>
+            <%end%>
+        </li>
+      </ul>
+            <a href="/signup/step3/<%=@checker%>" class="submit2" id="return">&gt;&gt;修正</a>
+            <%=submit_tag(">>登録",:class=>"submit2",:id=>"sub5")%>
+      <% end %>
+  </div>
+</div>
