@@ -5,11 +5,47 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'base', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
   </head>
 
   <body>
+
+
+  <header>
+    <a href="#" class="icon" id="title" ><%= image_tag 'icon.png' %></a>
+
+      <div id="right_side">
+        <form action="/search">
+        <input type="text" name="search" id="text">
+        <input type="submit" id="submit">
+        </form>
+        <div id="icon">
+          <a href="#"id="prof"><%= image_tag 'prof.png' %></a>
+          <a href="#"id="conf"><%= image_tag 'conf.png' %></a>
+        </div>
+      </div>
+
+  </header>
+
+
+
+  <div id="side_main_menu">
+    <ul>
+      <li>トップ</li>
+      <li>ランキング</li>
+      <li>最新の投稿</li>
+      <li>Coming Soon</li>
+      <li>Coming Soon</li>
+    </ul>
+    <a href="#"><%= image_tag 'post.png' %></a>
+  </div>
+
+  <div id="main">
+
+  </div>
     <%= yield %>
   </body>
 </html>
