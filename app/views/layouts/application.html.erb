@@ -37,15 +37,15 @@
 
 
 
-  <div id="side_main_menu">
+  <div id="main_menu">
     <ul>
-      <li>トップ</li>
-      <li>ランキング</li>
-      <li>最新の投稿</li>
-      <li>Coming Soon</li>
-      <li>Coming Soon</li>
+      <li><%=link_to "トップ","/top" %></li>
+      <li><%=link_to "ランキング","/ranking" %></li>
+      <li><%=link_to "最新の投稿","/newpost" %></li>
     </ul>
-    <a href="#"><%= image_tag 'post.png' %></a>
+    <%=link_to "/post" do%>
+      <%=image_tag 'post.png' %>
+    <%end %>
   </div>
 
   <div id="main">
