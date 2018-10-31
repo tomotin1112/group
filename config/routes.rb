@@ -26,7 +26,5 @@ Rails.application.routes.draw do
 
   get '/signup/kiyaku'
 
-  post '/search', to:'top#search'
-
   get '/mypage', to:'mypage#index'
 end
