@@ -12,11 +12,11 @@
 
   <body>
     <header>
-      <%=link_to "/top",:id=>"title" do%>
-        <%= image_tag 'icon.png' %>
-      <%end %>
-
-
+      <ul>
+        <li><%=link_to "トップ","/top" %></li>
+        <li><%=link_to "ランキング","/ranking" %></li>
+        <li><%=link_to "最新の投稿","/newpost" %></li>
+      </ul>
       <div id="right_side">
         <%=form_tag controller:"top",action:"index" do%>
           <%=text_field_tag "keyword" %>
@@ -38,19 +38,14 @@
 
 
   <div id="main_menu">
-    <ul>
-      <li><%=link_to "トップ","/top" %></li>
-      <li><%=link_to "ランキング","/ranking" %></li>
-      <li><%=link_to "最新の投稿","/newpost" %></li>
-    </ul>
     <%=link_to "/post" do%>
       <%=image_tag 'post.png' %>
     <%end %>
   </div>
 
   <div id="main">
-
-  </div>
     <%= yield %>
+  </div>
+
   </body>
 </html>

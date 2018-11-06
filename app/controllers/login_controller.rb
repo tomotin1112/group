@@ -20,6 +20,7 @@ class LoginController < ApplicationController
     else
       day = member[0].register_day
       if member[0].password == Digest::MD5.hexdigest(password + day)
+        session[:user] = member[0].user_id
         return redirect_to '/top/'
       else
         flash[:error] = 'パスワードが違います'
