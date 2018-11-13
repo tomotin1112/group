@@ -87,6 +87,8 @@ header {
     }
   }
 }
+
+
 #main_menu {
     width:100%;
     height: 35px;
@@ -135,18 +137,4 @@ hr{
     color: black;
     border: 0;
     border-bottom: 3px solid #000000;
-}
-
-#main_area{
-  background-color: white;
-  li{
-    font-weight: bold;
-  }
-  p{
-    font-size: 15px;
-  }
-}
-
-#current_user_id{
-  border-bottom: 1px solid #BBBBBB;
 }
