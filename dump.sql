@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.11, for Win64 (x86_64)
 --
 -- Host: localhost    Database: groupdev
 -- ------------------------------------------------------
--- Server version	8.0.12
+-- Server version	8.0.11
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -35,6 +35,7 @@ CREATE TABLE `follow` (
 
 LOCK TABLES `follow` WRITE;
 /*!40000 ALTER TABLE `follow` DISABLE KEYS */;
+INSERT INTO `follow` VALUES ('aragaki_yui','arimura_kasumi'),('aragaki_yui','sakai_masato'),('aragaki_yui','suda_masaki'),('aragaki_yui','tiba_yudai'),('arimura_kasumi','aragaki_yui'),('arimura_kasumi','ayano_go'),('arimura_kasumi','isihara_satomi'),('ayano_go','hamabe_minami'),('ayano_go','yosioka_riho'),('ayase_haruka','higaside_masahiro'),('ayase_haruka','oguri_syun'),('ayase_haruka','oizumi_yo'),('ayase_haruka','sakurai_hinako'),('ayase_haruka','yonekura_ryoko'),('hamabe_minami','higaside_masahiro'),('higaside_masahiro','isihara_satomi'),('higaside_masahiro','kohinata_humiyo'),('higaside_masahiro','nagasawa_masami'),('higaside_masahiro','oguri_syun'),('higaside_masahiro','oizumi_yo'),('higaside_masahiro','sakai_masato'),('isihara_satomi','satou_jirou'),('isihara_satomi','yamada_takayuki'),('kohinata_humiyo','higaside_masahiro'),('kohinata_humiyo','nagasawa_masami'),('nagasawa_masami','oguri_syun'),('nagasawa_masami','oizumi_yo'),('nagasawa_masami','sakai_masato'),('oguri_syun','sakurai_hinako'),('oguri_syun','suda_masaki'),('oizumi_yo','sakai_masato'),('oizumi_yo','sakurai_hinako'),('sakai_masato','sakurai_hinako'),('sakai_masato','satou_jirou'),('sakai_masato','tiba_yudai'),('sakurai_hinako','satou_jirou'),('sakurai_hinako','suda_masaki'),('satou_jirou','suda_masaki'),('suda_masaki','satou_jirou'),('suda_masaki','tiba_yudai'),('suda_masaki','yamada_takayuki'),('tiba_yudai','yamada_takayuki'),('yamada_takayuki','yonekura_ryoko'),('yamada_takayuki','yosioka_riho'),('yamada_takayuki','yositaka_yuriko'),('yonekura_ryoko','kohinata_humiyo'),('yonekura_ryoko','yosioka_riho'),('yonekura_ryoko','yositaka_yuriko'),('yosioka_riho','arimura_kasumi'),('yosioka_riho','ayano_go'),('yosioka_riho','hamabe_minami'),('yosioka_riho','yositaka_yuriko'),('yositaka_yuriko','aragaki_yui'),('yositaka_yuriko','arimura_kasumi'),('yositaka_yuriko','ayano_go'),('yositaka_yuriko','ayase_haruka'),('yositaka_yuriko','hamabe_minami'),('yositaka_yuriko','higaside_masahiro'),('yositaka_yuriko','isihara_satomi'),('yositaka_yuriko','kohinata_humiyo'),('yositaka_yuriko','nagasawa_masami'),('yositaka_yuriko','oguri_syun'),('yositaka_yuriko','oizumi_yo'),('yositaka_yuriko','sakai_masato'),('yositaka_yuriko','sakurai_hinako'),('yositaka_yuriko','satou_jirou'),('yositaka_yuriko','suda_masaki'),('yositaka_yuriko','tiba_yudai'),('yositaka_yuriko','yamada_takayuki'),('yositaka_yuriko','yonekura_ryoko'),('yositaka_yuriko','yosioka_riho');
 /*!40000 ALTER TABLE `follow` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -308,4 +309,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-09-07 19:25:20
+-- Dump completed on 2018-11-13 13:07:32
