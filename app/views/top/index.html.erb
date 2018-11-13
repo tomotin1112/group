@@ -1,1 +1,11 @@
-<h1>モーニングショット！</h1>
+<%@posts.each do |post| %>
+  <div class="post">
+    <div class="profile">
+      <%=post.target_id %>
+    </div>
+    <div class="image">
+
+    </div>
+  </div>
+
+<% end %>
