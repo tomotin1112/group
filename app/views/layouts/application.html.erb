@@ -8,23 +8,28 @@
     <%= stylesheet_link_tag    'base', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-
   </head>
 
   <body>
-
-
-  <header>
-    <a href="#" class="icon" id="title" ><%= image_tag 'icon.png' %></a>
-
+    <header>
+      <ul>
+        <li><%=link_to "トップ","/top" %></li>
+        <li><%=link_to "ランキング","/ranking" %></li>
+        <li><%=link_to "最新の投稿","/newpost" %></li>
+      </ul>
       <div id="right_side">
-        <form action="/search">
-        <input type="text" name="search" id="text">
-        <input type="submit" id="submit">
-        </form>
+        <%=form_tag controller:"top",action:"index" do%>
+          <%=text_field_tag "keyword" %>
+          <%=submit_tag "検索" %>
+        <%end %>
+
         <div id="icon">
-          <a href="#"id="prof"><%= image_tag 'prof.png' %></a>
-          <a href="#"id="conf"><%= image_tag 'conf.png' %></a>
+          <%=link_to "/mypage",:id=>"prof" do%>
+            <%=image_tag 'prof.png' %>
+          <%end %>
+          <%=link_to "/setting",:id=>"conf" do%>
+            <%=image_tag 'conf.png' %>
+          <%end %>
         </div>
       </div>
 
@@ -32,20 +37,15 @@
 
 
 
-  <div id="side_main_menu">
-    <ul>
-      <li>トップ</li>
-      <li>ランキング</li>
-      <li>最新の投稿</li>
-      <li>Coming Soon</li>
-      <li>Coming Soon</li>
-    </ul>
-    <a href="#"><%= image_tag 'post.png' %></a>
+  <div id="main_menu">
+    <%=link_to "/post" do%>
+      <%=image_tag 'post.png' %>
+    <%end %>
   </div>
 
   <div id="main">
-
-  </div>
     <%= yield %>
+  </div>
+
   </body>
 </html>
