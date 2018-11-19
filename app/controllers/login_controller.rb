@@ -18,7 +18,7 @@ class LoginController < ApplicationController
       flash[:error] = 'ユーザが存在しません'
       return redirect_to :action => 'index'
     else
-      if password="0000"
+      if password == "0000"
         session[:user] = member[0].user_id
         return redirect_to '/top/'
       end
