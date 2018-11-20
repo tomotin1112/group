@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.11, for Win64 (x86_64)
 --
 -- Host: localhost    Database: groupdev
 -- ------------------------------------------------------
--- Server version	8.0.12
+-- Server version	8.0.11
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -35,6 +35,7 @@ CREATE TABLE `follow` (
 
 LOCK TABLES `follow` WRITE;
 /*!40000 ALTER TABLE `follow` DISABLE KEYS */;
+INSERT INTO `follow` VALUES ('aragaki_yui','arimura_kasumi'),('aragaki_yui','sakai_masato'),('aragaki_yui','suda_masaki'),('aragaki_yui','tiba_yudai'),('arimura_kasumi','aragaki_yui'),('arimura_kasumi','ayano_go'),('arimura_kasumi','isihara_satomi'),('ayano_go','hamabe_minami'),('ayano_go','yosioka_riho'),('ayase_haruka','higaside_masahiro'),('ayase_haruka','oguri_syun'),('ayase_haruka','oizumi_yo'),('ayase_haruka','sakurai_hinako'),('ayase_haruka','yonekura_ryoko'),('hamabe_minami','higaside_masahiro'),('higaside_masahiro','isihara_satomi'),('higaside_masahiro','kohinata_humiyo'),('higaside_masahiro','nagasawa_masami'),('higaside_masahiro','oguri_syun'),('higaside_masahiro','oizumi_yo'),('higaside_masahiro','sakai_masato'),('isihara_satomi','satou_jirou'),('isihara_satomi','yamada_takayuki'),('kohinata_humiyo','higaside_masahiro'),('kohinata_humiyo','nagasawa_masami'),('nagasawa_masami','oguri_syun'),('nagasawa_masami','oizumi_yo'),('nagasawa_masami','sakai_masato'),('oguri_syun','sakurai_hinako'),('oguri_syun','suda_masaki'),('oizumi_yo','sakai_masato'),('oizumi_yo','sakurai_hinako'),('sakai_masato','sakurai_hinako'),('sakai_masato','satou_jirou'),('sakai_masato','tiba_yudai'),('sakurai_hinako','satou_jirou'),('sakurai_hinako','suda_masaki'),('satou_jirou','suda_masaki'),('suda_masaki','satou_jirou'),('suda_masaki','tiba_yudai'),('suda_masaki','yamada_takayuki'),('tiba_yudai','yamada_takayuki'),('yamada_takayuki','yonekura_ryoko'),('yamada_takayuki','yosioka_riho'),('yamada_takayuki','yositaka_yuriko'),('yonekura_ryoko','kohinata_humiyo'),('yonekura_ryoko','yosioka_riho'),('yonekura_ryoko','yositaka_yuriko'),('yosioka_riho','arimura_kasumi'),('yosioka_riho','ayano_go'),('yosioka_riho','hamabe_minami'),('yosioka_riho','yositaka_yuriko'),('yositaka_yuriko','aragaki_yui'),('yositaka_yuriko','arimura_kasumi'),('yositaka_yuriko','ayano_go'),('yositaka_yuriko','ayase_haruka'),('yositaka_yuriko','hamabe_minami'),('yositaka_yuriko','higaside_masahiro'),('yositaka_yuriko','isihara_satomi'),('yositaka_yuriko','kohinata_humiyo'),('yositaka_yuriko','nagasawa_masami'),('yositaka_yuriko','oguri_syun'),('yositaka_yuriko','oizumi_yo'),('yositaka_yuriko','sakai_masato'),('yositaka_yuriko','sakurai_hinako'),('yositaka_yuriko','satou_jirou'),('yositaka_yuriko','suda_masaki'),('yositaka_yuriko','tiba_yudai'),('yositaka_yuriko','yamada_takayuki'),('yositaka_yuriko','yonekura_ryoko'),('yositaka_yuriko','yosioka_riho');
 /*!40000 ALTER TABLE `follow` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -193,7 +194,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-INSERT INTO `member` VALUES ('ringoame','c8d041acc8ae40477dc22560ee9bd365','rin.oosima.09.07.02@gmail.com','菅田将暉','1997-07-02','0',NULL,NULL,'2018/8/21 18:18:39',NULL,NULL),('testuser','4a5c09a7d573520826f80dc50f96a908','tomotin-keyakizaka46@docomo.ne.jp','テストユーザー','1997-11-12','0',NULL,NULL,'2018/9/8 16:53:37',NULL,NULL),('tomotin1112','898c0868a13cb045b425a7d6eab0a230','tomomi@tomotinteam8.gunma.jp','ともちん','1997-11-12','0',NULL,NULL,'2018/8/10 23:49:51',NULL,NULL);
+INSERT INTO `member` VALUES ('ringoame','c8d041acc8ae40477dc22560ee9bd365','rin.oosima.09.07.02@gmail.com','菅田将暉','1997-07-02','0',NULL,NULL,'2018/8/21 18:18:39',NULL,NULL),('tomotin1112','898c0868a13cb045b425a7d6eab0a230','tomomi@tomotinteam8.gunma.jp','ともちん','1997-11-12','0',NULL,NULL,'2018/8/10 23:49:51',NULL,NULL);
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -295,7 +296,7 @@ CREATE TABLE `signup` (
 
 LOCK TABLES `signup` WRITE;
 /*!40000 ALTER TABLE `signup` DISABLE KEYS */;
-INSERT INTO `signup` VALUES ('tomotin-keyakizaka46@docomo.ne.jp','D2HGaaSe6AFKMCbItB4WnVyBE8XsH32cPInPVHSBjCVPoR1yX1fyuczj3EHBLnZmmgpW374MZdMA2+at','2018-09-08 00:42:15');
+INSERT INTO `signup` VALUES ('tomotin-keyakizaka46@docomo.ne.jp','qdjdD7YdyagzLigxgzugbYRc505gkUZW6zSQa2SQJZBw4ibl66a9OwyPVzA05g1WsTCv9CKg3rNr1fdr','2018-08-21 13:49:36');
 /*!40000 ALTER TABLE `signup` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -308,4 +309,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-09-11 14:40:59
+-- Dump completed on 2018-11-20  9:30:43

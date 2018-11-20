@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'mypage/index'
   get 'top', to: 'top#index'
+  post 'top', to:'top#index'
 
   get '/', to: 'login#index'
   post 'login/auth'
@@ -24,4 +25,6 @@ Rails.application.routes.draw do
   get '/signup/step6'
 
   get '/signup/kiyaku'
+
+  get '/mypage', to:'mypage#index'
 end
