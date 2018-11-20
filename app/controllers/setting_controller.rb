@@ -4,11 +4,12 @@ class SettingController < ApplicationController
   def index
     #ユーザーのレコードを検索、user_informationに格納
     #user_information = Member.where(user_id:session[:current_user])
-    user_information = UserConfig.where(user_id:"aragaki_yui")
+    #user_information = UserConfig.where(user_id:"aragaki_yui")
+    user_information = Member.where(user_id:"aragaki_yui")
     #ユーザー情報の各項目を変数に格納
     @mail_address = user_information[0].mail_address
-    @changed_mail_address = user_information[0].changed_mail_address
-    @confilm_mail_address = user_information[0].confilm_mail_address
+    #@changed_mail_address = user_information[0].changed_mail_address
+    #@confilm_mail_address = user_information[0].confilm_mail_address
 
 
   end
@@ -17,20 +18,20 @@ class SettingController < ApplicationController
 
     #ユーザーのレコードを検索、user_informationに格納
     #user_information = Member.where(user_id:session[:current_user])
-    user_information = UserConfig.where(user_id: "aragaki_yui")
+    #user_information = Member.where(user_id: "aragaki_yui")
     #ユーザー情報の各項目を変数に格納
-    to_changed_address = params[:to_changed_address]
-    confilm_address = params[:confilm_address]
+    #to_changed_address = params[:to_changed_address]
+    #confilm_address = params[:confilm_address]
 
-    UserConfig.where(user_id: "aragaki_yui").update_all(changed_mail_address: to_changed_address,confilm_mail_address: confilm_address)
+   # UserConfig.where(user_id: "aragaki_yui").update_all(changed_mail_address: to_changed_address,confilm_mail_address: confilm_address)
 
 
     #現在のメールアドレス
-    @mail_address = user_information[0].mail_address
+    #@mail_address = user_information[0].mail_address
     #変更後のメールアドレス
-    @changed_mail_address = user_information[0].changed_mail_address
+    #@changed_mail_address = user_information[0].changed_mail_address
     #確認用のメールアドレス
-    @confilm_mail_address = user_information[0].confilm_mail_address
+    #@confilm_mail_address = user_information[0].confilm_mail_address
 
     puts("現在のメールアドレス")
     puts(@mail_address)
@@ -49,11 +50,24 @@ class SettingController < ApplicationController
   def password_config
     #ユーザーのレコードを検索、user_informationに格納
     #user_information = Member.where(user_id:session[:current_user])
-    user_information = UserConfig.where(user_id:"aragaki_yui")
+    user_information = Member.where(user_id:"aragaki_yui")
     #ユーザー情報の各項目を変数に格納
     @password = user_information[0].password
-    #@changed_mail_address = user_information[0].changed_mail_address
-    #@confilm_mail_address = user_information[0].confilm_mail_address
+
+    @to_changed_password = params[:to_changed_password]
+    @confilm_password = params[:confilm_password]
+
+    if request.post?
+      if @to_changed_password == @confilm_password
+        redirect_to '/setting/password_completion'
+      else
+        redirect_to '/setting/password_config'
+    end
+
+
+
+
+    end
 
   end
 end
