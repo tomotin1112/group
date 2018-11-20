@@ -1,12 +1,4 @@
-<<<<<<< HEAD:dump.sql
--- MySQL dump 10.13  Distrib 8.0.11, for Win64 (x86_64)
-=======
-<<<<<<< HEAD:dump.sql
- -- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
-=======
 ﻿ -- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
->>>>>>> 1d13a7c22d9e3a9c72655bec6e7803913ac57045:group.sql
->>>>>>> ed0ab54b3c40f4e4f2ae330d9bc6c5bcaf64b92d:group.sql
 --
 -- Host: localhost    Database: groupdev
 -- ------------------------------------------------------
@@ -204,11 +196,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-<<<<<<< HEAD:dump.sql
-INSERT INTO `member` VALUES ('ringoame','c8d041acc8ae40477dc22560ee9bd365','rin.oosima.09.07.02@gmail.com','菅田将暉','1997-07-02','0',NULL,NULL,'2018/8/21 18:18:39',NULL,NULL),('tomotin1112','898c0868a13cb045b425a7d6eab0a230','tomomi@tomotinteam8.gunma.jp','ともちん','1997-11-12','0',NULL,NULL,'2018/8/10 23:49:51',NULL,NULL);
-=======
 INSERT INTO `member` VALUES ('aragaki_yui','0000','0003','新垣結衣','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('arimura_kasumi','0000','0000','有村架純','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('ayano_go','0000','0001','綾野剛','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('ayase_haruka','0000','0002','綾瀬はるか','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('hamabe_minami','0000','0004','浜辺美波','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('higaside_masahiro','0000','0005','東出昌大','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('isihara_satomi','0000','0006','石原さとみ','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('kohinata_humiyo','0000','0007','小日向文世','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('nagasawa_masami','0000','0008','長澤まさみ','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('oguri_syun','0000','0009','小栗旬','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('oizumi_yo','0000','0010','大泉洋','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('sakai_masato','0000','0011','堺雅人','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('sakurai_hinako','0000','0012','桜井日奈子','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('satou_jirou','0000','0013','佐藤二朗','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('suda_masaki','0000','0014','菅田将暉','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('tiba_yudai','0000','0015','千葉雄大','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('yamada_takayuki','0000','0016','山田孝之','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('yonekura_ryoko','0000','0017','米倉涼子','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('yosioka_riho','0000','0018','吉岡里帆','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('yositaka_yuriko','0000','0019','吉高由里子','0000-00-00','1','0000-00-00','0','0000/00/00','no','no');
->>>>>>> ed0ab54b3c40f4e4f2ae330d9bc6c5bcaf64b92d:group.sql
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -311,10 +299,6 @@ CREATE TABLE `signup` (
 
 LOCK TABLES `signup` WRITE;
 /*!40000 ALTER TABLE `signup` DISABLE KEYS */;
-<<<<<<< HEAD:dump.sql
-INSERT INTO `signup` VALUES ('tomotin-keyakizaka46@docomo.ne.jp','qdjdD7YdyagzLigxgzugbYRc505gkUZW6zSQa2SQJZBw4ibl66a9OwyPVzA05g1WsTCv9CKg3rNr1fdr','2018-08-21 13:49:36');
-=======
->>>>>>> ed0ab54b3c40f4e4f2ae330d9bc6c5bcaf64b92d:group.sql
 /*!40000 ALTER TABLE `signup` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -351,12 +335,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD:dump.sql
--- Dump completed on 2018-11-20  9:30:43
-=======
-<<<<<<< HEAD:dump.sql
--- Dump completed on 2018-11-13  9:21:06
-=======
 -- Dump completed on 2018-11-13  9:13:08
->>>>>>> 1d13a7c22d9e3a9c72655bec6e7803913ac57045:group.sql
->>>>>>> ed0ab54b3c40f4e4f2ae330d9bc6c5bcaf64b92d:group.sql
