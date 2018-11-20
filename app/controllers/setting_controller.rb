@@ -44,4 +44,16 @@ class SettingController < ApplicationController
 
     redirect_to '/setting'
   end
+
+  #パスワード変更画面の処理
+  def password_config
+    #ユーザーのレコードを検索、user_informationに格納
+    #user_information = Member.where(user_id:session[:current_user])
+    user_information = UserConfig.where(user_id:"aragaki_yui")
+    #ユーザー情報の各項目を変数に格納
+    @password = user_information[0].password
+    #@changed_mail_address = user_information[0].changed_mail_address
+    #@confilm_mail_address = user_information[0].confilm_mail_address
+
+  end
 end
