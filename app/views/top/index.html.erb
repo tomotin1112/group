@@ -1,10 +1,19 @@
+
+
 <%@posts.each do |post| %>
   <div class="post">
     <div class="profile">
-      <%=post.target_id %>
+      <div class="account">
+        <%=image_tag "/images/profile/test.png" %>
+
+      </div>
     </div>
     <div class="image">
-
+      <%i=0 %>
+      <% while i<post.count %>
+        <%=image_tag "/images/posts/"+post.target_id+"/"+post.post_id+"/"+i.to_s+".jpg", :width => '100px', :height => '100px'%>
+        <%i+=1 %>
+      <%end %>
     </div>
   </div>
 

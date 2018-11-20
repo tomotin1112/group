@@ -1,3 +1,49 @@
 // Place all the styles related to the Mypage controller here.
+
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the Mypage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#user_area{
+  background-color: white;
+  li{
+    font-weight: bold;
+    list-style: none;
+  }
+  p{
+    margin-left: 15cm;
+    font-size: 20px;
+    font-family: 'Courier New';
+  }
+  .square_btn{
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #fd9535; /*色*/
+    border-radius: 4px; /*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0,0,0,0.05);
+    font-weight: bold;
+    border: solid 2px #d27d00; /*線の色*/
+  }
+  .square_btn:active{ /*押したとき*/
+    box-shadow: 0 0 2px rgba(0,0,0,0.30);
+  }
+  #b{
+    margin-top: -20pt;
+    margin-left: 25cm;
+  }
+}
+
+#main_area{
+  background: #ffd966;
+}
+
+#current_user_id{
+  border-bottom: 1px solid #BBBBBB;
+}
