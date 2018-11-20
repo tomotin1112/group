@@ -1,43 +1,60 @@
-<%= stylesheet_link_tag    'setting',media:'all','data-turbolinks-track':'reload' %>
+<%= stylesheet_link_tag 'setting', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<div id = "user_information_area">
+<div id="user_information_area">
 
   <h1>ユーザー情報</h1>
-  <div id = "config_menu">
-  <ul>
-    <li>メールアドレス</li>
-    <li>パスワード</li>
-  </ul>
-  </div>
-
-
-  <br>
-  <br>
-
-  <div id = "mail_address_config">
-    <ul style="list-style: none;">
-      <li>
-        <%= label_tag "メールアドレス" %>
-        <%= text_field_tag "Before the change", value = @mail_address, :readonly => true %>
-
-      </li>
-      <li>
-        <%= label_tag "メールアドレス変更" %>
-        <%= text_field_tag "to change address" %>
-      </li>
-      <li>
-        <%= label_tag "メールアドレス確認" %>
-        <%= text_field_tag "confirm address" %>
-      </li>
-      <li>
-        <%= label_tag "パスワード" %>
-        <%= text_field_tag "password" %>
-      </li>
+  <div id="config_menu">
+    <ul>
+      <li>メールアドレス</li>
+      <li>パスワード</li>
     </ul>
   </div>
 
 
+  <br>
+  <br>
 
+  <div id="mail_address_config">
+    <% if request.get? %>
+      <%= form_tag(controller: 'setting', action: 'change') do %>
+        <ul style="list-style: none;">
+          <li>
+            <%= label_tag 'address2', text="メールアドレス" %>
+            <%= text_field_tag "Before_the_change", value = @mail_address, :readonly => true %>
+          </li>
+          <li>
+            <%= label_tag "メールアドレス変更" %>
+
+            <%= text_field_tag "to_changed_address", value = @changed_mail_address %>
+          </li>
+          <li>
+            <%= label_tag "メールアドレス確認" %>
+            <%= text_field_tag "confilm_address", value = @confilm_mail_address %>
+          </li>
+          <li>
+            <%= label_tag "パスワード" %>
+            <%= text_field_tag "password" %>
+          </li>
+        </ul>
+        <%= submit_tag 'button', :name => 'button' %>
+      <% end %>
+    <% else %>
+      <p>「メールアドレス変更」のメールをお送りしました。<br>
+        メールに記載されているURLをクリックして、<br>
+        パスワードを入力してください。</p>
+
+      <br>
+      <br>
+      <p>メールが届かない場合</p>
+      <ul>
+        <li>メールアドレスが正しいかご確認の上、間違っていた場合は再登録してください。</li>
+        <li>ドメイン指定受信を設定している方は、「nikki.jp」を受信できるように設定してください。</li>
+        <li>お使いのメールソフトで、迷惑メールフォルダに入っていないかご確認ください。</li>
+        <li>Nikkiに登録済のメールアドレスには送信されません。</li>
+      </ul>
+    <% end %>
+
+  </div>
 
 
 </div>
