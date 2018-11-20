@@ -1,50 +1,51 @@
 <div id="menu">
   <p>会員登録手続きの手順</p>
-  <%=image_tag 'reg3.png'%>
+  <%= image_tag 'reg3.png' %>
 </div>
 <div id="main">
-  <h3 color="#ff0000"><%=flash[:notice]%></h3>
+  <h3 color="#ff0000"><%= flash[:notice] %></h3>
   <div id="form">
     <div id="g">
-      <%=image_tag 'pen.png'%><strong>登録情報の入力</strong>
+      <%= image_tag 'pen.png' %><strong>登録情報の入力</strong>
     </div>
     <hr>
-    <%=form_tag(controller: 'signup',action: 'check') do%>
-    <ul>
-      <li>
-        <%=label_tag('address',text="メールアドレス")%>
-        <%= text_field_tag('address',value=session[:address],:readonly=>true)%>
-      </li>
-      <li>
-        <%=label_tag('password',text="パスワード")%>
-        <%=password_field_tag('password','',:size=>20,:max_length=>20)%>【半角英数字6文字以上20文字以内】
-      </li>
-      <li>
-        <%=label_tag('re_password',text="パスワード確認")%>
-        <%=password_field_tag('re_password','',:size=>20,:max_length=>20)%>
-      </li>
-      <li>
-        <%=label_tag('userid',text="ユーザーID")%>
-        <%=text_field_tag('userid',value=session[:userid],:size=>20,:max_length=>20)%>【20文字以内】
-      </li>
-      <li>
-        <%=label_tag('accountname',text="アカウント名")%>
-        <%=text_field_tag('accountname',value=session[:accountname],:size=>50,:max_length=>50)%>【半角・全角50文字以内】
-      </li>
-      <li>
-        <%=label_tag('year',text="生年月日")%>
-        <%=number_field_tag('year',value=session[:year],:size=>4,:max_length=>4,:min_length=>4)%>年
-        <%=number_field_tag('month',value=session[:month],:size=>2,:max_length=>2,:min_length=>1)%>月
-        <%=number_field_tag('day',value=session[:day],:size=>2,:max_length=>2,:min_length=>1)%>日
-      </li>
-      <li>
-        <%=label_tag(text="性別")%>
-        <%=radio_button_tag('gender',value='0',:checked=>true)%>男性
-        <%=radio_button_tag('gender',value='1')%>女性
-        <%=radio_button_tag('gender',value='2')%>その他
-      </li>
-    </ul>
-      <%=submit_tag(">>次へ",:id=>'reg3sub',:class=>'submit2')%>
-    <%end%>
+    <%= form_tag(controller: 'signup', action: 'check') do %>
+      <ul>
+        <li>
+          <%= label_tag('address', text = "メールアドレス") %>
+          <%= text_field_tag('address', value = session[:address], :readonly => true) %>
+        </li>
+        <li>
+          <%= label_tag('password', text = "パスワード") %>
+          <%= password_field_tag('password', '', :size => 20, :max_length => 20) %>【半角英数字6文字以上20文字以内】
+        </li>
+        <li>
+          <%= label_tag('re_password', text = "パスワード確認") %>
+          <%= password_field_tag('re_password', '', :size => 20, :max_length => 20) %>
+        </li>
+        <li>
+          <%= label_tag('userid', text = "ユーザーID") %>
+          <%= text_field_tag('userid', value = session[:userid], :size => 20, :max_length => 20) %>【20文字以内】
+        </li>
+        <li>
+          <%= label_tag('accountname', text = "アカウント名") %>
+          <%= text_field_tag('accountname', value = session[:accountname], :size => 50, :max_length => 50) %>
+          【半角・全角50文字以内】
+        </li>
+        <li>
+          <%= label_tag('year', text = "生年月日") %>
+          <%= number_field_tag('year', value = session[:year], :size => 4, :max_length => 4, :min_length => 4) %>年
+          <%= number_field_tag('month', value = session[:month], :size => 2, :max_length => 2, :min_length => 1) %>月
+          <%= number_field_tag('day', value = session[:day], :size => 2, :max_length => 2, :min_length => 1) %>日
+        </li>
+        <li>
+          <%= label_tag(text = "性別") %>
+          <%= radio_button_tag('gender', value = '0', :checked => true) %>男性
+          <%= radio_button_tag('gender', value = '1') %>女性
+          <%= radio_button_tag('gender', value = '2') %>その他
+        </li>
+      </ul>
+      <%= submit_tag(">>次へ", :id => 'reg3sub', :class => 'submit2') %>
+    <% end %>
   </div>
 </div>

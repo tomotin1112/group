@@ -27,4 +27,7 @@ Rails.application.routes.draw do
   get '/signup/kiyaku'
 
   get '/mypage', to:'mypage#index'
+
+  get '/setting',to:'setting#index'
+  post '/setting',to:'setting#change'
 end
