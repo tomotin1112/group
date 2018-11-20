@@ -1,4 +1,4 @@
- -- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.11, for Win64 (x86_64)
 --
 -- Host: localhost    Database: groupdev
 -- ------------------------------------------------------
@@ -59,7 +59,6 @@ CREATE TABLE `gender` (
 
 LOCK TABLES `gender` WRITE;
 /*!40000 ALTER TABLE `gender` DISABLE KEYS */;
-INSERT INTO `gender` VALUES ('0','男性'),('1','女性'),('2','その他');
 /*!40000 ALTER TABLE `gender` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,7 +98,7 @@ CREATE TABLE `image` (
   `user_id` varchar(20) NOT NULL,
   `post_id` varchar(10) NOT NULL,
   `image_id` varchar(1) NOT NULL,
-  `image_url` varchar(300) NOT NULL,
+  `image_url` varchar(31) NOT NULL,
   `s_genru_id` varchar(10) NOT NULL,
   `good_count` int(11) NOT NULL,
   PRIMARY KEY (`user_id`,`post_id`,`image_id`)
@@ -112,7 +111,6 @@ CREATE TABLE `image` (
 
 LOCK TABLES `image` WRITE;
 /*!40000 ALTER TABLE `image` DISABLE KEYS */;
-INSERT INTO `image` VALUES ('aragaki_yui','0','0','aragaki_yui/0/0.jpg','1',0),('arimura_kasumi','0','0','arimura_kasumi/0/0.jpg','1',0),('arimura_kasumi','0','1','arimura_kasumi/0/1.jpg','1',0),('ayano_go','0','0','ayano_go/0/0.jpg','1',0),('ayano_go','0','1','ayano_go/0/1.jpg','1',0),('ayase_haruka','0','0','ayase_haruka/0/0.jpg','0',0),('ayase_haruka','0','1','ayase_haruka/0/1.jpg','0',0),('hamabe_minami','0','0','hamabe_minami/0/0.jpg','0',0),('hamabe_minami','0','1','hamabe_minami/0/1.jpg','0',0),('higaside_masahiro','0','0','higaside_masahiro/0/0.jpg','0',0),('higaside_masahiro','0','1','higaside_masahiro/0/1.jpg','0',0),('higaside_masahiro','0','2','higaside_masahiro/0/2.jpg','0',0),('higaside_masahiro','0','3','higaside_masahiro/0/3.jpg','0',0),('isihara_satomi','0','0','ishihara_satomi/0/0.jpg','0',0),('isihara_satomi','0','1','isihara_satomi/0/1.jpg','0',0),('kohinata_humiyo','0','0','kohinata_humiyo/0/0.jpg','0',0),('nagasawa_masami','0','0','nagasawa_masami/0/0.jpg','0',0),('nagasawa_masami','0','1','nagasawa_masami/0/1.jpg','0',0),('oguri_syun','0','0','oguri_syun/0/0.jpg','0',0),('oguri_syun','0','1','oguri_syun/0/1.jpg','0',0),('oguri_syun','1','0','oguri_syun/1/0.jpg','0',0),('oguri_syun','1','1','oguri_syun/1/1.jpg','0',0),('oizumi_yo','0','0','oizumi_yo/0/0.jpg','0',0),('oizumi_yo','1','0','oizumi_yo/1/0.jpg','0',0),('sakai_masato','0','0','sakai_masato/0/0.jpg','0',0),('sakai_masato','0','1','sakai_masato/0/1.jpg','0',0),('sakai_masato','0','2','sakai_masato/0/2.jpg','0',0),('sakurai_hinako','0','0','sakurai_hinako/0/0.jpg','0',0),('satou_jirou','0','0','satou_jirou/0/0.jpg','0',0),('satou_jirou','0','1','satou_jirou/0/1.jpg','0',0),('satou_jirou','1','0','satou_jirou/1/0.jpg','0',0),('satou_jirou','1','1','satou_jirou/1/1.jpg','0',0),('suda_masaki','0','0','suda_masaki/0/0.jpg','0',0),('suda_masaki','0','1','suda_masaki/0/1.jpg','0',0),('tiba_yudai','0','0','tiba_yudai/0/0.jpg','0',0),('yamada_takayuki','0','0','yamada_takayuki/0/0.jpg','0',0),('yamada_takayuki','0','1','yamada_takayuki/0/1.jpg','0',0),('yamada_takayuki','0','2','yamada_takayuki/0/2.jpg','0',0),('yonekura_ryoko','0','0','yonekura_ryoko/0/0.jpg','0',0),('yosioka_riho','0','0','yosioka_riho/0/0.jpg','0',0),('yosioka_riho','0','1','yosioka_riho/0/1.jpg','0',0),('yositaka_yuriko','0','0','yositaka_yuriko/0/0.jpg','0',0);
 /*!40000 ALTER TABLE `image` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -196,7 +194,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-INSERT INTO `member` VALUES ('aragaki_yui','0000','0003','新垣結衣','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('arimura_kasumi','0000','0000','有村架純','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('ayano_go','0000','0001','綾野剛','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('ayase_haruka','0000','0002','綾瀬はるか','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('hamabe_minami','0000','0004','浜辺美波','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('higaside_masahiro','0000','0005','東出昌大','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('isihara_satomi','0000','0006','石原さとみ','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('kohinata_humiyo','0000','0007','小日向文世','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('nagasawa_masami','0000','0008','長澤まさみ','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('oguri_syun','0000','0009','小栗旬','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('oizumi_yo','0000','0010','大泉洋','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('sakai_masato','0000','0011','堺雅人','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('sakurai_hinako','0000','0012','桜井日奈子','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('satou_jirou','0000','0013','佐藤二朗','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('suda_masaki','0000','0014','菅田将暉','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('tiba_yudai','0000','0015','千葉雄大','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('yamada_takayuki','0000','0016','山田孝之','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('yonekura_ryoko','0000','0017','米倉涼子','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('yosioka_riho','0000','0018','吉岡里帆','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('yositaka_yuriko','0000','0019','吉高由里子','0000-00-00','1','0000-00-00','0','0000/00/00','no','no');
+INSERT INTO `member` VALUES ('ringoame','c8d041acc8ae40477dc22560ee9bd365','rin.oosima.09.07.02@gmail.com','菅田将暉','1997-07-02','0',NULL,NULL,'2018/8/21 18:18:39',NULL,NULL),('tomotin1112','898c0868a13cb045b425a7d6eab0a230','tomomi@tomotinteam8.gunma.jp','ともちん','1997-11-12','0',NULL,NULL,'2018/8/10 23:49:51',NULL,NULL);
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -223,7 +221,6 @@ CREATE TABLE `post` (
 
 LOCK TABLES `post` WRITE;
 /*!40000 ALTER TABLE `post` DISABLE KEYS */;
-INSERT INTO `post` VALUES ('aragaki_yui','0','コードブルー','2018-11-06',0),('arimura_kasumi','0','広告ポスター撮影','2018-11-06',0),('ayano_go','0','映画 亜人','2018-11-06',0),('ayase_haruka','0','南方先生!','2018-11-06',0),('hamabe_minami','0','雑誌撮影','2018-11-06',0),('higaside_masahiro','0','舞台挨拶','2018-11-06',0),('isihara_satomi','0','週刊誌撮影','2018-11-06',0),('kohinata_humiyo','0','コンフィデンスマン','2018-11-06',0),('nagasawa_masami','0','コンフィデンスマン','2018-11-06',0),('oguri_syun','0','CM撮影','2018-11-06',0),('oguri_syun','1','映画撮影','2018-11-06',0),('oizumi_yo','0','ドラマワンシーン','2018-11-06',0),('oizumi_yo','1','眼力!','2018-11-06',0),('sakai_masato','0','リーガルハイ','2018-11-06',0),('sakurai_hinako','0','雑誌撮影','2018-11-06',0),('satou_jirou','0','ドラマ','2018-11-06',0),('satou_jirou','1','CM','2018-11-06',0),('suda_masaki','0','ライブ告知','2018-11-06',0),('tiba_yudai','0','右目がうずく','2018-11-06',0),('yamada_takayuki','0','宣材写真','2018-11-06',0),('yonekura_ryoko','0','ドクターX','2018-11-06',0),('yosioka_riho','0','CM','2018-11-06',0),('yositaka_yuriko','0','酔いすぎちゃった','2018-11-06',0);
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -299,31 +296,8 @@ CREATE TABLE `signup` (
 
 LOCK TABLES `signup` WRITE;
 /*!40000 ALTER TABLE `signup` DISABLE KEYS */;
+INSERT INTO `signup` VALUES ('tomotin-keyakizaka46@docomo.ne.jp','qdjdD7YdyagzLigxgzugbYRc505gkUZW6zSQa2SQJZBw4ibl66a9OwyPVzA05g1WsTCv9CKg3rNr1fdr','2018-08-21 13:49:36');
 /*!40000 ALTER TABLE `signup` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `test`
---
-
-DROP TABLE IF EXISTS `test`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `test` (
-  `id` int(11) DEFAULT NULL,
-  `name` int(11) DEFAULT NULL,
-  `text` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `test`
---
-
-LOCK TABLES `test` WRITE;
-/*!40000 ALTER TABLE `test` DISABLE KEYS */;
-INSERT INTO `test` VALUES (0,0,0),(0,0,1),(0,1,2),(1,0,3);
-/*!40000 ALTER TABLE `test` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -335,4 +309,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-13 13:07:32
+-- Dump completed on 2018-11-20  9:30:43
