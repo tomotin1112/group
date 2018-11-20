@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-﻿--
-=======
-﻿ -- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
---
->>>>>>> f29c3e24a3a599c66da5c902888044289c663a54
+﻿-- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
 -- Host: localhost    Database: groupdev
 -- ------------------------------------------------------
 -- Server version	8.0.11
@@ -313,7 +308,3 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
-=======
--- Dump completed on 2018-11-13  9:13:08
->>>>>>> f29c3e24a3a599c66da5c902888044289c663a54
