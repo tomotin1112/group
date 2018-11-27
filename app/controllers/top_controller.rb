@@ -3,10 +3,13 @@ class TopController < ApplicationController
     if request.post?
       @keyword = params[:keyword]
     else
-      #@posts = Image.joins(:follow).where(follow_user: session[:user])
-      @posts = Image.find_by_sql(["select f.user_id,f.target_id,i.post_id,
-      i.image_id,i.image_url,count(*) as count from follow f,Image i
-      where f.target_id=i.user_id and f.user_id=?
+      @posts = Image.find_by_sql(["select f.target_id,i.post_id,
+      p.title,count(*) as count,m.account_name from follow f
+      inner join image i on f.user_id=?
+      and f.target_id=i.user_id
+      inner join member m on f.target_id=m.user_id
+      inner join post p on i.user_id=p.user_id
+      and i.post_id=p.post_id
       group by target_id,post_id", session[:user]])
     end
   end
