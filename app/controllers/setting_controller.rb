@@ -14,37 +14,7 @@ class SettingController < ApplicationController
 
   end
 
-  def change
 
-    #ユーザーのレコードを検索、user_informationに格納
-    #user_information = Member.where(user_id:session[:current_user])
-    #user_information = Member.where(user_id: "aragaki_yui")
-    #ユーザー情報の各項目を変数に格納
-    #to_changed_address = params[:to_changed_address]
-    #confilm_address = params[:confilm_address]
-
-   # UserConfig.where(user_id: "aragaki_yui").update_all(changed_mail_address: to_changed_address,confilm_mail_address: confilm_address)
-
-
-    #現在のメールアドレス
-    #@mail_address = user_information[0].mail_address
-    #変更後のメールアドレス
-    #@changed_mail_address = user_information[0].changed_mail_address
-    #確認用のメールアドレス
-    #@confilm_mail_address = user_information[0].confilm_mail_address
-
-    puts("現在のメールアドレス")
-    puts(@mail_address)
-    puts("")
-    puts("変更後のメールアドレス")
-    puts(@changed_mail_address)
-    puts("")
-    puts("確認用のメールアドレス")
-    puts(@confilm_mail_address)
-
-
-    redirect_to '/setting'
-  end
 
   #パスワード変更画面の処理
   def password_config
@@ -53,6 +23,7 @@ class SettingController < ApplicationController
     user_information = Member.where(user_id:"aragaki_yui")
     #ユーザー情報の各項目を変数に格納
     @password = user_information[0].password
+    @mail_address = user_information[0].mail_address
 
     @to_changed_password = params[:to_changed_password]
     @confilm_password = params[:confilm_password]
@@ -63,7 +34,8 @@ class SettingController < ApplicationController
         #mail_address = user_information[0].mail_address
 
         #一時的にパスワード変更情報のテーブルを作成
-        #UserUpdatePassword .create(mail_address: mail_address,date: Time.now ,after_password: @to_changed_password)
+        UserUpdatePassword.create(mail_address: @mail_address,date: Time.now ,after_password: @to_changed_password)
+        #ユーザー宛にメールを送信する
         sendMail('k016c1122@it-neec.jp')
 
 
@@ -84,6 +56,23 @@ class SettingController < ApplicationController
     @mail_address = user_information[0].mail_address
     #@changed_mail_address = user_information[0].changed_mail_address
     #@confilm_mail_address = user_information[0].confilm_mail_address
+
+    #変更するパスワードの情報を取得
+    after_password_information = UserUpdatePassword.where(mail_address:@mail_address)
+
+    @after_password = after_password_information[0].after_password
+
+    #変更後パスワードを Memberテーブル の password に上書きし、保存
+    user_information[0].password = @after_password
+    user_information[0].save
+
+    #使用し終わったレコードを削除
+    after_password_information.delete_all()
+
+
+
+
+
 
 
   end
