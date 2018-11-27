@@ -29,6 +29,12 @@ Rails.application.routes.draw do
   get '/mypage', to:'mypage#index'
 
   get '/setting',to:'setting#index'
+  get '/setting/index'
+  get '/setting/password_config'
+  get '/setting/password_completion'
+
+  post '/setting/password_config',to:'setting#password_config'
+
   post '/setting',to:'setting#change'
 
 end
