@@ -59,6 +59,12 @@ class SettingController < ApplicationController
 
     if request.post?
       if @to_changed_password == @confilm_password
+        #ユーザーのメールアドレスを取得
+        mail_address = user_information[0].mail_address
+
+        #一時的にパスワード変更情報のテーブルを作成
+        UserUpdatePassword .create(mail_address: mail_address,date: Time.now ,after_password: @to_changed_password)
+
         redirect_to '/setting/password_completion'
       else
         redirect_to '/setting/password_config'
