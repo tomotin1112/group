@@ -94,6 +94,8 @@ class SettingController < ApplicationController
     user_information[0].password = @after_password
     user_information[0].save
 
+    after_password_information.delete_all()
+
 
 
 
