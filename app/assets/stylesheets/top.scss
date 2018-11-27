@@ -6,10 +6,8 @@ body{
     .post{
       image{
         img{
-          overflow: hidden;
-          width: 200px;
-          height: 200px;
-          position: relative;
+          max-width:200px;
+          height:auto;
         }
       }
     }
