@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag 'setting', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div id="user_information_area">
+
+  <h1>ユーザー情報</h1>
+  <div id="config_menu">
+    <ul>
+      <li>
+        <%= link_to 'メールアドレス変更', '/setting/index' %>
+      </li>
+      <li>
+        <%= link_to 'パスワード変更', '/setting/password_config' %>
+      </li>
+
+    </ul>
+  </div>
+
+  <br>
+  <br>
+
+  <div id="mail_address_config">
+
+
+    <h2>ユーザー情報が更新されました。<br>
+    引き続きコンテンツをお楽しみください。</h2>
+  </div>
+
+
+</div>

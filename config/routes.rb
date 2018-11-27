@@ -37,4 +37,6 @@ Rails.application.routes.draw do
 
   post '/setting',to:'setting#change'
 
+  get '/setting/change_completion'
+
 end

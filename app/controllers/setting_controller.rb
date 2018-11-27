@@ -69,11 +69,30 @@ class SettingController < ApplicationController
       else
         redirect_to '/setting/password_config'
     end
-
-
-
-
     end
 
   end
+
+  def sendMail(address)
+    require 'mail'
+
+    mail=Mail.new do
+      from 'site@tomotinteam8.gunma.jp'
+      to address
+      subject '【nikki】登録のご案内'
+
+      #変更完了後画面のURLをメールで送付
+      body '下記のURLより本登録を完了させてください。
+http://114.167.17.61/signup/step3/'
+    end
+
+    mail.delivery_method :smtp, {
+        address: 'sv9.star.ne.jp',
+        port: 587,
+        user_name: 'site@tomotinteam8.gunma.jp',
+        password: 'tomotin4812'
+    }
+    mail.deliver!
+  end
+
 end
