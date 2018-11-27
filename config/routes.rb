@@ -30,4 +30,5 @@ Rails.application.routes.draw do
 
   get '/setting',to:'setting#index'
   post '/setting',to:'setting#change'
+
 end
