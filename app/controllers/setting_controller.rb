@@ -53,6 +53,7 @@ class SettingController < ApplicationController
     user_information = Member.where(user_id:"aragaki_yui")
     #ユーザー情報の各項目を変数に格納
     @password = user_information[0].password
+    @mail_address = user_information[0].mail_address
 
     @to_changed_password = params[:to_changed_password]
     @confilm_password = params[:confilm_password]
@@ -63,7 +64,7 @@ class SettingController < ApplicationController
         #mail_address = user_information[0].mail_address
 
         #一時的にパスワード変更情報のテーブルを作成
-        #UserUpdatePassword .create(mail_address: mail_address,date: Time.now ,after_password: @to_changed_password)
+        UserUpdatePassword.create(mail_address: @mail_address,date: Time.now ,after_password: @to_changed_password)
         sendMail('k016c1122@it-neec.jp')
 
 
@@ -84,6 +85,19 @@ class SettingController < ApplicationController
     @mail_address = user_information[0].mail_address
     #@changed_mail_address = user_information[0].changed_mail_address
     #@confilm_mail_address = user_information[0].confilm_mail_address
+
+    #変更するパスワードの情報を取得
+    after_password_information = UserUpdatePassword.where(mail_address:@mail_address)
+
+    @after_password = after_password_information[0].after_password
+
+    user_information[0].password = @after_password
+    user_information[0].save
+
+
+
+
+
 
 
   end
