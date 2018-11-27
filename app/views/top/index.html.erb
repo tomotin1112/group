@@ -1,11 +1,10 @@
-
-
-<%@posts.each do |post| %>
+<% @posts.each do |post| %>
   <div class="post">
     <div class="profile">
-      <div class="account">
-        <%=image_tag "/images/profile/test.png" %>
-
+      <%= image_tag "/images/profile/test.png" %>
+      <div class="name">
+        <%= post.target_id %>
+        <%= post.account_name %>
       </div>
     </div>
     <div class="image">
