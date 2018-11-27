@@ -6,14 +6,16 @@
         <%= post.target_id %>
         <%= post.account_name %>
       </div>
-  </div>
-  <div class="image">
-    <% i = 0 %>
-    <% while i < post.count %>
-      <%= image_tag "/images/posts/" + post.target_id + "/" + post.post_id + "/" + i.to_s + ".jpg", :width => '100px', :height => '100px' %>
-      <% i += 1 %>
-    <% end %>
-  </div>
+    </div>
+    <div class="image">
+      <%i=0 %>
+      <% while i<post.count %>
+        <div class="trim lb">
+        <%=image_tag "/images/posts/"+post.target_id+"/"+post.post_id+"/"+i.to_s+".jpg", :width => '100px', :height => '100px'%>
+        </div>
+        <%i+=1 %>
+      <%end %>
+    </div>
   </div>
 
 <% end %>
