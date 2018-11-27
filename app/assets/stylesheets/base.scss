@@ -155,14 +155,6 @@ header {
 
   .image {
     .trim {
-      @if $count == 1{
-        width: 250px;
-        height: 150px;
-        position: relative;
-        overflow: hidden;
-        background-color: #85d093;
-
-      }
       width: 250px;
       height: 150px;
       position: relative;
