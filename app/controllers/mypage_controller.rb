@@ -1,10 +1,12 @@
 class MypageController < ApplicationController
-
   #ユーザー情報表示
   def index
     #ユーザーのレコードを検索、user_informationに格納
     #user_information = Member.where(user_id:session[:current_user])
+
     user_information = Member.where(user_id:"aragaki_yui")
+    #user_information = Member.where(user_id:session[:user])
+
     #ユーザー情報の各項目を変数に格納
     @user_id = user_information[0].user_id
     @account_name = user_information[0].account_name
