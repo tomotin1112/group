@@ -114,6 +114,7 @@ class SignupController < ApplicationController
           session[:year] = params[:year]
           session[:month] = params[:month]
           session[:day] = params[:day]
+          session[:birthday] = params[:year] + "-" + params[:month] + "-" + params[:day]
           session[:gender] = @gender
           session[:register_day] = @register_day
 
