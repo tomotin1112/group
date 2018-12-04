@@ -20,8 +20,7 @@
   <br>
 
   <div id="mail_address_config">
-    <% if request.get? %>
-      <%= form_tag(controller: 'setting', action: 'change') do %>
+      <%= form_tag(controller: 'setting', action: 'index') do %>
         <ul style="list-style: none;">
           <li>
             <%= label_tag 'address2', text="メールアドレス" %>
@@ -30,11 +29,11 @@
           <li>
             <%= label_tag "メールアドレス変更" %>
 
-            <%= text_field_tag "to_changed_address", value = @changed_mail_address %>
+            <%= text_field_tag "to_changed_address", value = session[:to_changed_address] %>
           </li>
           <li>
             <%= label_tag "メールアドレス確認" %>
-            <%= text_field_tag "confilm_address", value = @confilm_mail_address %>
+            <%= text_field_tag "confilm_address", value = session[:confilm_address] %>
           </li>
           <li>
             <%= label_tag "パスワード" %>
@@ -43,21 +42,7 @@
         </ul>
         <%= submit_tag 'button', :name => 'button' %>
       <% end %>
-    <% else %>
-      <p>「メールアドレス変更」のメールをお送りしました。<br>
-        メールに記載されているURLをクリックして、<br>
-        パスワードを入力してください。</p>
 
-      <br>
-      <br>
-      <p>メールが届かない場合</p>
-      <ul>
-        <li>メールアドレスが正しいかご確認の上、間違っていた場合は再登録してください。</li>
-        <li>ドメイン指定受信を設定している方は、「nikki.jp」を受信できるように設定してください。</li>
-        <li>お使いのメールソフトで、迷惑メールフォルダに入っていないかご確認ください。</li>
-        <li>Nikkiに登録済のメールアドレスには送信されません。</li>
-      </ul>
-    <% end %>
 
   </div>
 

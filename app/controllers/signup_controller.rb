@@ -94,7 +94,8 @@ class SignupController < ApplicationController
       result=Member.where(user_id:params[:user_id]).count
       if result == 0
         time = Time.now
-        time = time.year.to_s + '/' + time.month.to_s + '/' + time.day.to_s + ' ' + time.hour.to_s + ':' + time.min.to_s + ':' + time.sec.to_s
+        time = time.to_s(:db)
+        #time = time.year.to_s + '/' + time.month.to_s + '/' + time.day.to_s + ' ' + time.hour.to_s + ':' + time.min.to_s + ':' + time.sec.to_s
         @userid = params[:userid]
         @password = Digest::MD5.hexdigest(params[:password]+time)
         @mail_address = params[:address]

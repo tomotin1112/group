@@ -95,6 +95,19 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer "text"
   end
 
+  create_table "user_config", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "user_id", limit: 20
+    t.string "mail_address", limit: 100
+    t.string "changed_mail_address", limit: 100
+    t.string "confilm_mail_address", limit: 100
+  end
+
+  create_table "user_update_mailaddress", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "user_id", limit: 20
+    t.string "after_mailaddress", limit: 100
+    t.datetime "date"
+  end
+
   create_table "user_update_password", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "mail_address", limit: 20
     t.datetime "date"

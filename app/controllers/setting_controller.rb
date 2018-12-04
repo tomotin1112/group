@@ -8,8 +8,33 @@ class SettingController < ApplicationController
     user_information = Member.where(user_id:"aragaki_yui")
     #ユーザー情報の各項目を変数に格納
     @mail_address = user_information[0].mail_address
-    #@changed_mail_address = user_information[0].changed_mail_address
-    #@confilm_mail_address = user_information[0].confilm_mail_address
+
+
+    changed_mail_address = params[:to_changed_address]
+    confilm_mail_address = params[:confilm_address]
+    user_id = user_information[0].user_id
+
+    if request.post?
+      if changed_mail_address == confilm_mail_address
+
+
+        time = Time.zone.now
+        time = time.to_s(:db)
+
+
+        #time = time.year.to_s + '-' + time.month.to_s + '-' + time.day.to_s + ' ' + time.hour.to_s + ':' + time.min.to_s + ':' + time.sec.to_s
+        #一時的にメールアドレス変更情報のテーブルを作成
+        UserUpdateMailaddress.create(user_id: user_id,after_mailaddress: changed_mail_address,before_mailaddress:@mail_address,date: time )
+        #ユーザー宛にメールを送信する
+        # 現在つぶのメールアドレスを指定
+        sendMail('k016c1122@it-neec.jp')
+
+
+        redirect_to '/setting/mailaddress_completion'
+      else
+        redirect_to '/setting/index'
+      end
+    end
 
 
   end
@@ -34,8 +59,9 @@ class SettingController < ApplicationController
         #mail_address = user_information[0].mail_address
 
         #一時的にパスワード変更情報のテーブルを作成
-        UserUpdatePassword.create(mail_address: @mail_address,date: Time.now ,after_password: @to_changed_password)
+        UserUpdatePassword.create(mail_address: @mail_address,date: Time.zone.now ,after_password: @to_changed_password)
         #ユーザー宛にメールを送信する
+        # 現在つぶのメールアドレスを指定
         sendMail('k016c1122@it-neec.jp')
 
 
@@ -71,7 +97,7 @@ class SettingController < ApplicationController
     user_information[0].save
 
     #使用し終わったレコードを削除
-    after_password_information[0].delete_all()
+    after_password_information.delete_all()
 
 
 
@@ -104,3 +130,5 @@ http://localhost/setting/change_completion/'
   end
 
 end
+
+
