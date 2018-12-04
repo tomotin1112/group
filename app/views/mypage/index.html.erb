@@ -1,0 +1,34 @@
+
+
+<%= stylesheet_link_tag    'mypage',media:'all','data-turbolinks-track':'reload' %>
+
+
+
+<div id ="user_area">
+
+
+  <p id = "current_user_image"><%= @profile_image %></p>
+  <ul>
+    <li> <p id = "current_user_name"><%= @account_name %></p></li>
+    <li>
+      <form method="post" action="">
+        <input type="button" name="button" value="編集"/>
+      </form>
+    </li>
+    <li><p id = "current_user_id"><%= @user_id %></p></li>
+    <li><p id = "current_user_profile"><%= @profile%></p></li>
+  </ul>
+
+
+</div>
+
+
+
+
+
+
+<div id = "main_area">
+  <h1>Mypage#index</h1>
+  <p>Find me in app/views/mypage/index.html.erb</p>
+</div>
+

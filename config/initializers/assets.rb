@@ -21,3 +21,6 @@ Rails.application.config.assets.precompile += %w[reg4.scss]
 Rails.application.config.assets.precompile += %w[reg5.scss]
 Rails.application.config.assets.precompile += %w[reg6.scss]
 Rails.application.config.assets.precompile += %w[top.scss]
+Rails.application.config.assets.precompile += %w[mypage.scss]
+Rails.application.config.assets.precompile += %w[setting.scss]
+

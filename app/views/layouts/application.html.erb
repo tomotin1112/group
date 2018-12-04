@@ -5,11 +5,45 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'base', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+    <header>
+      <ul>
+        <li><%=link_to "トップ","/top" %></li>
+        <li><%=link_to "ランキング","/ranking" %></li>
+        <li><%=link_to "最新の投稿","/newpost" %></li>
+      </ul>
+      <div id="right_side">
+        <%=form_tag controller:"top",action:"index" do%>
+          <%=text_field_tag "keyword" %>
+          <%=submit_tag "検索" %>
+        <%end %>
+
+        <div id="icon">
+          <%=link_to "/mypage",:id=>"prof" do%>
+            <%=image_tag 'prof.png' %>
+          <%end %>
+          <%=link_to "/setting",:id=>"conf" do%>
+            <%=image_tag 'conf.png' %>
+          <%end %>
+        </div>
+      </div>
+
+  </header>
+
+  <div id="main_menu">
+    <%=link_to "/post" do%>
+      <%=image_tag 'post.png' %>
+    <%end %>
+  </div>
+
+  <div id="main">
     <%= yield %>
+  </div>
+
   </body>
 </html>
