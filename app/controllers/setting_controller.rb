@@ -57,17 +57,21 @@ class SettingController < ApplicationController
     #@changed_mail_address = user_information[0].changed_mail_address
     #@confilm_mail_address = user_information[0].confilm_mail_address
 
+    day = user_information[0].register_day
+
     #変更するパスワードの情報を取得
     after_password_information = UserUpdatePassword.where(mail_address:@mail_address)
 
-    @after_password = after_password_information[0].after_password
+    after_password = after_password_information[0].after_password
+
+    password = Digest::MD5.hexdigest(after_password + day)
 
     #変更後パスワードを Memberテーブル の password に上書きし、保存
-    user_information[0].password = @after_password
+    user_information[0].password = password
     user_information[0].save
 
     #使用し終わったレコードを削除
-    after_password_information.delete_all()
+    after_password_information[0].delete_all()
 
 
 
