@@ -138,7 +138,7 @@ class SettingController < ApplicationController
     #変更するメールアドレスの情報を取得(引っ張れる前提)
     #before_mailaddress = UserUpdateMailaddress.where(before_mailaddress:@mail_address)
     # ----------------------------------------------------------------------------------------------------
- 
+
     #------------------------------------------------------------------------------------------------
 
 
