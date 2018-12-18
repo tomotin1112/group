@@ -1,5 +1,4 @@
 class MypageController < ApplicationController
-
   #ユーザー情報表示
   def index
     #ユーザーのレコードを検索、user_informationに格納

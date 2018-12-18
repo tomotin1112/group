@@ -1,11 +1,30 @@
-
-<%@posts.each do |post| %>
+<% @posts.each do |post| %>
   <div class="post">
     <div class="profile">
-      <%=post.target_id %>
+      <%= image_tag "/images/profile/test.png" %>
+      <div class="name">
+        <%=link_to post.account_name,"/",:class=>"account_name"%>
+        <%=link_to post.target_id,"/" ,:class=>"target_id"%>
+      </div>
     </div>
-    <div class="image">
+    <% if post.count == 1 %>
+      <% count = "one" %>
+    <% elsif post.count == 2 %>
+      <% count = "two" %>
+    <% elsif post.count == 3 %>
+      <% count = "three" %>
+    <% elsif post.count == 4 %>
+      <% count = "four" %>
 
+    <% end %>
+    <div class="image <%= count %>">
+      <% i = 0 %>
+      <% while i < post.count %>
+        <div class="trim lb">
+          <%= image_tag "/images/posts/" + post.target_id + "/" + post.post_id + "/" + i.to_s + ".jpg", :width => '100px', :height => '100px' %>
+        </div>
+        <% i += 1 %>
+      <% end %>
     </div>
   </div>
 

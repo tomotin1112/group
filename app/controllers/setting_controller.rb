@@ -27,6 +27,7 @@ class SettingController < ApplicationController
         UserUpdateMailaddress.create(user_id: user_id,after_mailaddress: changed_mail_address,before_mailaddress:@mail_address,date: time )
         #ユーザー宛にメールを送信する
         # 現在つぶのメールアドレスを指定
+        #
         sendMail('k016c1122@it-neec.jp')
 
 
