@@ -1,27 +1,6 @@
 
-<form method="post" action="">
-  <input type="button" name = "button" value = "編集" />
-</form>
+<%= stylesheet_link_tag    'mypage', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-  <p id = "current_user_image"><%= @profile_image %></p>
-  <ul>
-    <li> <p id = "current_user_name"><%= @account_name %></p></li>
-    <li>
-      <form method="post" action="">
-        <input type="button" name="button" value="編集"/>
-      </form>
-    </li>
-    <li><p id = "current_user_id"><%= @user_id %></p></li>
-    <li><p id = "current_user_profile"><%= @profile%></p></li>
-  </ul>
-
-
-</div>
-
-<h1>Mypage#index</h1>
-<p>Find me in app/views/mypage/index.html.erb</p>
-
-<%= stylesheet_link_tag    'mypage',media:'all','data-turbolinks-track':'reload' %>
 
 <div id ="user_area">
 
@@ -43,10 +22,17 @@
 
 </div>
 
+<div id = "user_content_area">
 
+  <dev id = "user_content">
+    <ul style="list-style: none">
+      <li><%= label_tag 'address2', text="投稿" %></li>
+      <li><%= label_tag 'address2', text="フォロー" %></li>
+      <li><%= label_tag 'address2', text="いいね" %></li>
+    </ul>
+  </dev>
 
-<div id = "main_area">
-  <h1>Mypage#index</h1>
-  <p>Find me in app/views/mypage/index.html.erb</p>
 </div>
+
+
 

@@ -24,4 +24,3 @@ Rails.application.config.assets.precompile += %w[top.scss]
 Rails.application.config.assets.precompile += %w[setting.scss]
 Rails.application.config.assets.precompile += %w[mypage.scss]
 
-
