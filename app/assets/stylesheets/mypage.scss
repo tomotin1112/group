@@ -52,7 +52,11 @@
 }
 
 #user_content_area{
-
+  margin-top: 50px;
+  margin-left: 250px;
+  margin-right: 250px;
+  background-color: white;
+  border: solid 3px #000000;
 
 
 
@@ -60,9 +64,23 @@
     display: inline;
     padding-top: 10px;
     padding-right: 20px;
+
     ul li{
+      text-decoration: underline;
       display: inline;
     }
+
+  }
+
+  #user_main_contents{
+    img{
+      margin-right:45%;
+      margin-left: 45%;
+
+    }
+
+
+
 
   }
 

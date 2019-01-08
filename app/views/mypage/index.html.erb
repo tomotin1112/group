@@ -25,13 +25,17 @@
 
 <div id = "user_content_area">
 
-  <dev id = "user_content">
+  <div id = "user_content">
     <ul style="list-style: none">
       <li><%= label_tag 'address2', text="投稿" %></li>
       <li><%= label_tag 'address2', text="フォロー" %></li>
       <li><%= label_tag 'address2', text="いいね" %></li>
     </ul>
-  </dev>
+  </div>
+
+  <div id="user_main_contents">
+    <%= image_tag "/images/profile/test.png",:size => '100x100',:id => "img"%>
+  </div>
 
 </div>
 
