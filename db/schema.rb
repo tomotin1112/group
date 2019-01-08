@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "user_id", limit: 20, null: false
     t.string "post_id", limit: 10, null: false
     t.string "image_id", limit: 1, null: false
-    t.string "image_url", limit: 31, null: false
+    t.string "image_url", limit: 300, null: false
     t.string "s_genru_id", limit: 10, null: false
     t.integer "good_count", null: false
   end
@@ -46,13 +46,6 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "m_genru_name", limit: 30, null: false
     t.string "l_genru_id", limit: 10, null: false
     t.index ["m_genru_name"], name: "m_genru_name", unique: true
-  end
-
-  create_table "s_genru", primary_key: "s_genru_id", id: :string, limit: 10, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "s_genru_name", limit: 30, null: false
-    t.string "l_genru_id", limit: 10, null: false
-    t.string "m_genru_id", limit: 10
-    t.index ["s_genru_name"], name: "s_genru_name", unique: true
   end
 
   create_table "member", primary_key: "user_id", id: :string, limit: 20, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -84,11 +77,28 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "image_id", limit: 10, null: false
   end
 
-
+  create_table "s_genru", primary_key: "s_genru_id", id: :string, limit: 10, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "s_genru_name", limit: 30, null: false
+    t.string "l_genru_id", limit: 10, null: false
+    t.string "m_genru_id", limit: 10
+    t.index ["s_genru_name"], name: "s_genru_name", unique: true
+  end
 
   create_table "signup", primary_key: "mail_address", id: :string, limit: 100, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "checker", limit: 100, null: false
     t.datetime "date", null: false
+  end
+
+  create_table "test", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "id"
+    t.integer "name"
+    t.integer "text"
+  end
+
+  create_table "user_update_password", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "mail_address", limit: 20
+    t.datetime "date"
+    t.string "after_password", limit: 100
   end
 
 end
