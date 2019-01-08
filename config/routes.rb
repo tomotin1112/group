@@ -30,15 +30,23 @@ Rails.application.routes.draw do
 
   get '/setting',to:'setting#index'
   get '/setting/index'
+
+  post '/setting',to:'setting#index'
+  get '/setting/mailaddress_completion'
+
+
   get '/setting/password_config'
+  post '/setting/password_config',to:'setting#password_config'
   get '/setting/password_completion'
 
-  post '/setting/password_config',to:'setting#password_config'
+  post '/setting/index',to:'setting#password_config'
 
-  post '/setting',to:'setting#change'
+
+
 
 
   get '/setting/change_completion',to:'setting#change_completion'
+
 
 
 end
