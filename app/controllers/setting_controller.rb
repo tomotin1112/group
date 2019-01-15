@@ -84,21 +84,65 @@ class SettingController < ApplicationController
     #@changed_mail_address = user_information[0].changed_mail_address
     #@confilm_mail_address = user_information[0].confilm_mail_address
 
+    #ユーザー情報の登録日をdayに格納
     day = user_information[0].register_day
 
+    #パスワードの変更かメールアドレスの変更か
+    if UserUpdatePassword.exists?
+
+      puts("-----------------パスワード--------------------")
+      #変更するパスワードの情報を取得
+      after_password_information = UserUpdatePassword.where(mail_address:@mail_address)
+
+      after_password = after_password_information[0].after_password
+
+      password = Digest::MD5.hexdigest(after_password + day)
+
+      #変更後パスワードを Memberテーブル の password に上書きし、保存
+      user_information[0].password = password
+      user_information[0].save
+
+      #使用し終わったレコードを削除
+      after_password_information.delete_all()
+    else
+      puts("------------------メールアドレス----------------")
+      #変更するメールアドレスの情報を取得
+      mail_address_information = UserUpdateMailaddress.where(after_mailaddress:"k016c1122@it-neec.jp")
+
+      after_mail_address = mail_address_information[0].after_mailaddress
+
+      #変更後メールアドレスをMemberテーブルの mail_addressに上書きし、保存
+      user_information[0].mail_address =  after_mail_address
+      user_information[0].save
+
+      #使用し終わったレコードを削除
+      mail_address_information.delete_all()
+    end
+
+
+    #----------------------------------------------------------------------------------------
     #変更するパスワードの情報を取得
-    after_password_information = UserUpdatePassword.where(mail_address:@mail_address)
+    #after_password_information = UserUpdatePassword.where(mail_address:@mail_address)
 
-    after_password = after_password_information[0].after_password
+    #after_password = after_password_information[0].after_password
 
-    password = Digest::MD5.hexdigest(after_password + day)
+    #password = Digest::MD5.hexdigest(after_password + day)
 
     #変更後パスワードを Memberテーブル の password に上書きし、保存
-    user_information[0].password = password
-    user_information[0].save
+    #user_information[0].password = password
+    #user_information[0].save
 
     #使用し終わったレコードを削除
-    after_password_information.delete_all()
+    #after_password_information.delete_all()
+    #-------------------------------------------------------------------------------------------
+
+    #変更するメールアドレスの情報を取得(引っ張れる前提)
+    #before_mailaddress = UserUpdateMailaddress.where(before_mailaddress:@mail_address)
+    # ----------------------------------------------------------------------------------------------------
+
+    #------------------------------------------------------------------------------------------------
+
+
 
 
 
@@ -115,7 +159,6 @@ class SettingController < ApplicationController
       from 'site@tomotinteam8.gunma.jp'
       to address
       subject '【nikki】ユーザー情報変更のお知らせ'
-
       #変更完了後画面のURLをメールで送付
       body '下記のURLよりユーザー情報変更を完了させてください。
 http://localhost/setting/change_completion/'
