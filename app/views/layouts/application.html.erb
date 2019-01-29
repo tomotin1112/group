@@ -5,10 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'base', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'lity.min', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'lity.min', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'base', media: 'all'%>
+    <%= javascript_include_tag 'application'%>
 
   </head>
 
@@ -36,9 +34,16 @@
       </div>
 
       <div id="main_menu">
-        <%= link_to "/post" do %>
-          <%= image_tag 'post.png' %>
-        <% end %>
+
+        <%= image_tag "post.png",:class=> "post-modal" %>
+        <div id="postmodalwin" class="modalwin hide">
+          <a herf="#" class="modal-close"></a>
+          <h1>投稿</h1>
+          <div class="modalwin-contents">
+            <p>テキスト</p>
+            <button>閉じる</button>
+          </div>
+        </div>
       </div>
 
   </header>
