@@ -52,10 +52,9 @@ GEM
     bindex (0.5.0)
     bootsnap (1.3.0)
       msgpack (~> 1.0)
-    bootstrap (4.2.1)
-      autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 1.14.3, < 2)
-      sassc-rails (>= 2.0.0)
+    bootstrap-sass (3.4.0)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.3)
     byebug (10.0.2)
     capybara (3.3.1)
@@ -113,7 +112,6 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.4-x64-mingw32)
       mini_portile2 (~> 2.3.0)
-    popper_js (1.14.5)
     public_suffix (3.0.2)
     puma (3.11.4)
     rack (2.0.5)
@@ -162,12 +160,6 @@ GEM
     sassc (2.0.0)
       ffi (~> 1.9.6)
       rake
-    sassc-rails (2.1.0)
-      railties (>= 4.0.0)
-      sassc (>= 2.0)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
     selenium-webdriver (3.13.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
@@ -200,13 +192,14 @@ GEM
     websocket-extensions (0.1.3)
     xpath (3.1.0)
       nokogiri (~> 1.8)
+    yui-compressor (0.12.0)
 
 PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
-  bootstrap
+  bootstrap-sass
   byebug
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
@@ -223,6 +216,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+  yui-compressor
 
 RUBY VERSION
    ruby 2.4.4p296

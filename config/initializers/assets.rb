@@ -9,9 +9,10 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # Precompile additional assets.
-# application.js, application.css, and all non-JS/CSS in the app/assets
+# application.js, application.scss, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.precompile += %w[application.scss]
 Rails.application.config.assets.precompile += %w[base.scss]
 Rails.application.config.assets.precompile += %w[login.scss]
 Rails.application.config.assets.precompile += %w[reg.scss]
@@ -22,6 +23,6 @@ Rails.application.config.assets.precompile += %w[reg5.scss]
 Rails.application.config.assets.precompile += %w[reg6.scss]
 Rails.application.config.assets.precompile += %w[top.scss]
 Rails.application.config.assets.precompile += %w[setting.scss]
-Rails.application.config.assets.precompile += %w[mypage.scss]
+Rails.application.config.assets.precompile += %w[userpage.scss]
 Rails.application.config.assets.precompile += %w[lity.min.css]
 Rails.application.config.assets.precompile += %w[lity.min.js]
