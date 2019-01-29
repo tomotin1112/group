@@ -16,11 +16,6 @@
 //= require activestorage
 //= require_tree .
 
-<<<<<<< HEAD
-$(function(){
-});
-
-=======
 $(function () {
     // モーダルウィンドウを開く
     $('.post-modal').on('click', PostModal);
@@ -91,4 +86,3 @@ $(function () {
     }
 
 });
->>>>>>> 8735f5aa5181096575b16a867be09f16353745e0
