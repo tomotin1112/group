@@ -1,10 +1,8 @@
-
-
-﻿-- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
-
+-- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
+--
 -- Host: localhost    Database: groupdev
 -- ------------------------------------------------------
--- Server version	8.0.11
+-- Server version	8.0.12
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -62,7 +60,6 @@ CREATE TABLE `gender` (
 LOCK TABLES `gender` WRITE;
 /*!40000 ALTER TABLE `gender` DISABLE KEYS */;
 INSERT INTO `gender` VALUES ('0','男性'),('1','女性'),('2','その他');
-
 /*!40000 ALTER TABLE `gender` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,8 +112,7 @@ CREATE TABLE `image` (
 
 LOCK TABLES `image` WRITE;
 /*!40000 ALTER TABLE `image` DISABLE KEYS */;
-INSERT INTO `image` VALUES ('aragaki_yui','0','0','aragaki_yui/0/0.jpg','1',0),('arimura_kasumi','0','0','arimura_kasumi/0/0.jpg','1',0),('arimura_kasumi','0','1','arimura_kasumi/0/1.jpg','1',0),('ayano_go','0','0','ayano_go/0/0.jpg','1',0),('ayano_go','0','1','ayano_go/0/1.jpg','1',0),('ayase_haruka','0','0','ayase_haruka/0/0.jpg','0',0),('ayase_haruka','0','1','ayase_haruka/0/1.jpg','0',0),('hamabe_minami','0','0','hamabe_minami/0/0.jpg','0',0),('hamabe_minami','0','1','hamabe_minami/0/1.jpg','0',0),('higaside_masahiro','0','0','higaside_masahiro/0/0.jpg','0',0),('higaside_masahiro','0','1','higaside_masahiro/0/1.jpg','0',0),('higaside_masahiro','0','2','higaside_masahiro/0/2.jpg','0',0),('higaside_masahiro','0','3','higaside_masahiro/0/3.jpg','0',0),('isihara_satomi','0','0','ishihara_satomi/0/0.jpg','0',0),('isihara_satomi','0','1','isihara_satomi/0/1.jpg','0',0),('kohinata_humiyo','0','0','kohinata_humiyo/0/0.jpg','0',0),('nagasawa_masami','0','0','nagasawa_masami/0/0.jpg','0',0),('nagasawa_masami','0','1','nagasawa_masami/0/1.jpg','0',0),('oguri_syun','0','0','oguri_syun/0/0.jpg','0',0),('oguri_syun','0','1','oguri_syun/0/1.jpg','0',0),('oguri_syun','1','0','oguri_syun/1/0.jpg','0',0),('oguri_syun','1','1','oguri_syun/1/1.jpg','0',0),('oizumi_yo','0','0','oizumi_yo/0/0.jpg','0',0),('oizumi_yo','1','0','oizumi_yo/1/0.jpg','0',0),('sakai_masato','0','0','sakai_masato/0/0.jpg','0',0),('sakai_masato','0','1','sakai_masato/0/1.jpg','0',0),('sakai_masato','0','2','sakai_masato/0/2.jpg','0',0),('sakurai_hinako','0','0','sakurai_hinako/0/0.jpg','0',0),('satou_jirou','0','0','satou_jirou/0/0.jpg','0',0),('satou_jirou','0','1','satou_jirou/0/1.jpg','0',0),('satou_jirou','1','0','satou_jirou/1/0.jpg','0',0),('satou_jirou','1','1','satou_jirou/1/1.jpg','0',0),('suda_masaki','0','0','suda_masaki/0/0.jpg','0',0),('suda_masaki','0','1','suda_masaki/0/1.jpg','0',0),('tiba_yudai','0','0','tiba_yudai/0/0.jpg','0',0),('yamada_takayuki','0','0','yamada_takayuki/0/0.jpg','0',0),('yamada_takayuki','0','1','yamada_takayuki/0/1.jpg','0',0),('yamada_takayuki','0','2','yamada_takayuki/0/2.jpg','0',0),('yonekura_ryoko','0','0','yonekura_ryoko/0/0.jpg','0',0),('yosioka_riho','0','0','yosioka_riho/0/0.jpg','0',0),('yosioka_riho','0','1','yosioka_riho/0/1.jpg','0',0),('yositaka_yuriko','0','0','yositaka_yuriko/0/0.jpg','0',0);
-
+INSERT INTO `image` VALUES ('aragaki_yui','0','0','aragaki_yui/0/0.jpg','1',0),('arimura_kasumi','0','0','arimura_kasumi/0/0.jpg','1',0),('arimura_kasumi','0','1','arimura_kasumi/0/1.jpg','1',0),('ayano_go','0','0','ayano_go/0/0.jpg','1',0),('ayano_go','0','1','ayano_go/0/1.jpg','1',0),('ayase_haruka','0','0','ayase_haruka/0/0.jpg','0',0),('ayase_haruka','0','1','ayase_haruka/0/1.jpg','0',0),('hamabe_minami','0','0','hamabe_minami/0/0.jpg','0',0),('hamabe_minami','0','1','hamabe_minami/0/1.jpg','0',0),('higaside_masahiro','0','0','higaside_masahiro/0/0.jpg','0',0),('higaside_masahiro','0','1','higaside_masahiro/0/1.jpg','0',0),('higaside_masahiro','0','2','higaside_masahiro/0/2.jpg','0',0),('higaside_masahiro','0','3','higaside_masahiro/0/3.jpg','0',0),('isihara_satomi','0','0','ishihara_satomi/0/0.jpg','0',0),('isihara_satomi','0','1','isihara_satomi/0/1.jpg','0',0),('kohinata_humiyo','0','0','kohinata_humiyo/0/0.jpg','0',0),('nagasawa_masami','0','0','nagasawa_masami/0/0.jpg','0',0),('oguri_syun','0','0','oguri_syun/0/0.jpg','0',0),('oguri_syun','0','1','oguri_syun/0/1.jpg','0',0),('oguri_syun','1','0','oguri_syun/1/0.jpg','0',0),('oguri_syun','1','1','oguri_syun/1/1.jpg','0',0),('oizumi_yo','0','0','oizumi_yo/0/0.jpg','0',0),('oizumi_yo','1','0','oizumi_yo/1/0.jpg','0',0),('sakai_masato','0','0','sakai_masato/0/0.jpg','0',0),('sakai_masato','0','1','sakai_masato/0/1.jpg','0',0),('sakai_masato','0','2','sakai_masato/0/2.jpg','0',0),('sakurai_hinako','0','0','sakurai_hinako/0/0.jpg','0',0),('satou_jirou','0','0','satou_jirou/0/0.jpg','0',0),('satou_jirou','0','1','satou_jirou/0/1.jpg','0',0),('satou_jirou','1','0','satou_jirou/1/0.jpg','0',0),('satou_jirou','1','1','satou_jirou/1/1.jpg','0',0),('suda_masaki','0','0','suda_masaki/0/0.jpg','0',0),('suda_masaki','0','1','suda_masaki/0/1.jpg','0',0),('tiba_yudai','0','0','tiba_yudai/0/0.jpg','0',0),('yamada_takayuki','0','0','yamada_takayuki/0/0.jpg','0',0),('yamada_takayuki','0','1','yamada_takayuki/0/1.jpg','0',0),('yamada_takayuki','0','2','yamada_takayuki/0/2.jpg','0',0),('yonekura_ryoko','0','0','yonekura_ryoko/0/0.jpg','0',0),('yosioka_riho','0','0','yosioka_riho/0/0.jpg','0',0),('yosioka_riho','0','1','yosioka_riho/0/1.jpg','0',0),('yositaka_yuriko','0','0','yositaka_yuriko/0/0.jpg','0',0);
 /*!40000 ALTER TABLE `image` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -200,9 +196,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-
-INSERT INTO `member` VALUES ('aragaki_yui','0000','0003','新垣結衣','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('arimura_kasumi','0000','0000','有村架純','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('ayano_go','0000','0001','綾野剛','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('ayase_haruka','0000','0002','綾瀬はるか','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('hamabe_minami','0000','0004','浜辺美波','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('higaside_masahiro','0000','0005','東出昌大','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('isihara_satomi','0000','0006','石原さとみ','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('kohinata_humiyo','0000','0007','小日向文世','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('nagasawa_masami','0000','0008','長澤まさみ','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('oguri_syun','0000','0009','小栗旬','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('oizumi_yo','0000','0010','大泉洋','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('sakai_masato','0000','0011','堺雅人','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('sakurai_hinako','0000','0012','桜井日奈子','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('satou_jirou','0000','0013','佐藤二朗','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('suda_masaki','0000','0014','菅田将暉','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('tiba_yudai','0000','0015','千葉雄大','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('yamada_takayuki','0000','0016','山田孝之','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('yonekura_ryoko','0000','0017','米倉涼子','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('yosioka_riho','0000','0018','吉岡里帆','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('yositaka_yuriko','0000','0019','吉高由里子','0000-00-00','1','0000-00-00','0','0000/00/00','no','no');
-
+INSERT INTO `member` VALUES ('aragaki_yui','0000','0003','新垣結衣','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('arimura_kasumi','0000','0000','有村架純','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('ayano_go','0000','0001','綾野剛','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('ayase_haruka','0000','0002','綾瀬はるか','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('hamabe_minami','0000','0004','浜辺美波','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('higaside_masahiro','0000','0005','東出昌大','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('isihara_satomi','0000','0006','石原さとみ','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('kohinata_humiyo','0000','0007','小日向文世','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('nagasawa_masami','0000','0008','長澤まさみ','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('oguri_syun','0000','0009','小栗旬','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('oizumi_yo','0000','0010','大泉洋','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('sakai_masato','0000','0011','堺雅人','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('sakurai_hinako','0000','0012','桜井日奈子','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('satou_jirou','0000','0013','佐藤二朗','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('suda_masaki','0000','0014','菅田将暉','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('test','14ec49d0150f9f88dfeba04195e705ba','tomomi@tomotin.jp','test','1997-11-12','0',NULL,NULL,'2018/12/4 14:6:26',NULL,NULL),('tiba_yudai','0000','0015','千葉雄大','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('yamada_takayuki','0000','0016','山田孝之','0000-00-00','0','0000-00-00','0','0000/00/00','no','no'),('yonekura_ryoko','0000','0017','米倉涼子','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('yosioka_riho','0000','0018','吉岡里帆','0000-00-00','1','0000-00-00','0','0000/00/00','no','no'),('yositaka_yuriko','0000','0019','吉高由里子','0000-00-00','1','0000-00-00','0','0000/00/00','no','no');
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -230,7 +224,6 @@ CREATE TABLE `post` (
 LOCK TABLES `post` WRITE;
 /*!40000 ALTER TABLE `post` DISABLE KEYS */;
 INSERT INTO `post` VALUES ('aragaki_yui','0','コードブルー','2018-11-06',0),('arimura_kasumi','0','広告ポスター撮影','2018-11-06',0),('ayano_go','0','映画 亜人','2018-11-06',0),('ayase_haruka','0','南方先生!','2018-11-06',0),('hamabe_minami','0','雑誌撮影','2018-11-06',0),('higaside_masahiro','0','舞台挨拶','2018-11-06',0),('isihara_satomi','0','週刊誌撮影','2018-11-06',0),('kohinata_humiyo','0','コンフィデンスマン','2018-11-06',0),('nagasawa_masami','0','コンフィデンスマン','2018-11-06',0),('oguri_syun','0','CM撮影','2018-11-06',0),('oguri_syun','1','映画撮影','2018-11-06',0),('oizumi_yo','0','ドラマワンシーン','2018-11-06',0),('oizumi_yo','1','眼力!','2018-11-06',0),('sakai_masato','0','リーガルハイ','2018-11-06',0),('sakurai_hinako','0','雑誌撮影','2018-11-06',0),('satou_jirou','0','ドラマ','2018-11-06',0),('satou_jirou','1','CM','2018-11-06',0),('suda_masaki','0','ライブ告知','2018-11-06',0),('tiba_yudai','0','右目がうずく','2018-11-06',0),('yamada_takayuki','0','宣材写真','2018-11-06',0),('yonekura_ryoko','0','ドクターX','2018-11-06',0),('yosioka_riho','0','CM','2018-11-06',0),('yositaka_yuriko','0','酔いすぎちゃった','2018-11-06',0);
-
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -306,6 +299,7 @@ CREATE TABLE `signup` (
 
 LOCK TABLES `signup` WRITE;
 /*!40000 ALTER TABLE `signup` DISABLE KEYS */;
+INSERT INTO `signup` VALUES ('tomomi@tomotin.jp','G1b81ksF880iw3rZCY8e69G+cBYJptSPvIJSa+nasUfVk8N8rDhxtc4efYM90bDlIehW45QiNS5GaKs4','2018-12-04 05:05:38');
 /*!40000 ALTER TABLE `signup` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -341,3 +335,5 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-01-15 12:01:19

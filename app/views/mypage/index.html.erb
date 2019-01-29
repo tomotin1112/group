@@ -17,8 +17,12 @@
 
 </div>
 
-<h1>Mypage#index</h1>
-<p>Find me in app/views/mypage/index.html.erb</p>
+<%= stylesheet_link_tag    'mypage', media: 'all', 'data-turbolinks-track': 'reload' %>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 <div id ="user_area">
 
@@ -41,14 +45,42 @@
 </div>
 
 <div id = "user_content_area">
+<nav>
+  <div id = "user_content"class = contents>
+    <div class="p-3">
+      <ul style="list-style: none" class="nav nav-tabs">
+        <li class="nav-item">
+          <a href="#tab1" data-toggle="tab" class="nav-link">投稿</a>
+        </li>
+        <li class="nav-item">
+          <a href="#tab2" data-toggle="tab" class="nav-link">フォロー</a>
+        </li>
+        <li class="nav-item">
+          <a href="#tab3" data-toggle="tab" class="nav-link">いいね</a>
+        </li>
+      </ul>
 
-  <dev id = "user_content">
-    <ul style="list-style: none">
-      <li><%= label_tag 'address2', text="投稿" %></li>
-      <li><%= label_tag 'address2', text="フォロー" %></li>
-      <li><%= label_tag 'address2', text="いいね" %></li>
-    </ul>
-  </dev>
+      <div class="tab-content">
+        <div id="tab1" class="tab-pane active">
+          <p>投稿のぺーじ</p>
+        </div>
+
+        <div id="tab2" class="tab-pane">
+          <p>フォローのぺーじ</p>
+        </div>
+
+        <div id="tab3" class="tab-pane">
+          <p>いいねのぺーじ</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</nav>
+  <div id="user_main_contents">
+    <%= image_tag "/images/profile/test.png",:size => '100x100',:id => "img"%>
+  </div>
 
 </div>
 
