@@ -6,6 +6,7 @@
         <%=link_to post.account_name,"/",:class=>"account_name"%>
         <%=link_to post.target_id,"/" ,:class=>"target_id"%>
       </div>
+
     </div>
     <% if post.count == 1 %>
       <% count = "one" %>
@@ -20,13 +21,26 @@
     <div class="image <%= count %>">
       <% i = 0 %>
       <% while i < post.count %>
-          <div class="trim">
-            <%=link_to image_tag("/images/posts/" + post.target_id + "/" + post.post_id + "/" + i.to_s + ".jpg", :width => '100px', :height => '100px'),"/images/posts/" + post.target_id + "/" + post.post_id + "/" + i.to_s + ".jpg", 'data-lity'=>''%>
+        <div class="trim">
+          <%=image_tag("/images/posts/" + post.target_id + "/" + post.post_id + "/" + i.to_s + ".jpg", :width => '100px', :height =>
+              '100px',:class => "image-modal", data:{'id'=>post.target_id + post.post_id + i.to_s})%>
+
+          <!--<div id="imagemodalwin" class="modalwin hide">-->
+          <div id="<%=post.target_id + post.post_id + i.to_s%>" class="modalwin hide">
+            <a herf="#" class="modal-close"></a>
+            <h1>画像</h1>
+            <div class="modalwin-contents">
+              <%= image_tag("/images/posts/" + post.target_id + "/" + post.post_id + "/" + i.to_s + ".jpg", :width => '100px', :height =>
+                  '100px') %>
+              <button>閉じる</button>
+            </div>
           </div>
+
+        </div>
 
         <% i += 1 %>
       <% end %>
-    </div>
+      </div>
   </div>
 
 <% end %>

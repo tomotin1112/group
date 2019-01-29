@@ -59,3 +59,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'mysql2'
 gem 'jquery-rails'
+gem 'bootstrap-sass'
+gem 'yui-compressor'

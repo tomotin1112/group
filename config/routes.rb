@@ -41,7 +41,7 @@ Rails.application.routes.draw do
 
   post '/setting/index',to:'setting#password_config'
 
-
+  get '/latestpost',to:'latestpost#index'
 
 
 
