@@ -1,4 +1,5 @@
 class UserpageController < ApplicationController
+  include Common
   #ユーザー情報表示
   def index
     #ユーザーのレコードを検索、user_informationに格納
@@ -10,6 +11,8 @@ class UserpageController < ApplicationController
     @account_name = user_information.account_name
     @profile = user_information.profile
     @profile_image = user_information.profile_image
+    current_user
+
 
   end
 end
