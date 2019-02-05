@@ -14,7 +14,7 @@ class TopController < ApplicationController
       group by target_id,post_id", session[:user]])
     end
     puts("")
-    puts("top_page: "+current_user)
+    puts("top_page: " + current_user)
     puts("")
 
 
