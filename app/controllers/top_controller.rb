@@ -15,6 +15,9 @@ class TopController < ApplicationController
 
     current_user
 
+  def post
+    if request.post?
+      
+    end
   end
-
 end
