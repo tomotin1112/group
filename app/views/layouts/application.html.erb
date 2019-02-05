@@ -11,40 +11,30 @@
   </head>
 
   <body>
-    <header>
-      <ul>
+    <header class="clearfix">
+      <ul id="menu">
         <li><%=link_to "トップ","/top" %></li>
         <li><%=link_to "ランキング","/ranking" %></li>
         <li><%=link_to "最新の投稿","/newpost" %></li>
       </ul>
-      <div id="right_side">
-        <%=form_tag controller:"top",action:"index" do%>
-          <%=text_field_tag "keyword" %>
-          <%=submit_tag "検索" %>
-        <%end %>
-
-        <div id="icon">
-          <%=link_to @current,:id=>"prof" do%>
-            <%=image_tag 'prof.png' %>
-          <%end %>
-          <%=link_to "/setting",:id=>"conf" do%>
-            <%=image_tag 'conf.png' %>
-          <%end %>
-        </div>
-      </div>
-
-      <div id="main_menu">
-
-        <%= image_tag "post.png",:class=> "post-modal" %>
-        <div id="postmodalwin" class="modalwin hide">
-          <a herf="#" class="modal-close"></a>
-          <h1>投稿</h1>
-          <div class="modalwin-contents">
-            <p>テキスト</p>
-            <button>閉じる</button>
+      <div id="right">
+        <div id="user_menu">
+          <div id="icon">
+            <%=link_to "/" + @current,:id=>"prof" do%>
+              <%=image_tag 'prof.png' %>
+            <%end %>
+            <%=link_to "/setting",:id=>"conf" do%>
+              <%=image_tag 'conf.png' %>
+            <%end %>
           </div>
         </div>
+
+        <div id="post_menu">
+          <%= image_tag "post.png",:class=> "post-modal" %>
+          <%= render template: 'layouts/post'%>
+        </div>
       </div>
+
 
   </header>
 

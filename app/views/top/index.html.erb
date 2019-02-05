@@ -30,9 +30,8 @@
             <a herf="#" class="modal-close"></a>
             <h1>画像</h1>
             <div class="modalwin-contents">
-              <%= image_tag("/images/posts/" + post.target_id + "/" + post.post_id + "/" + i.to_s + ".jpg", :width => '100px', :height =>
-                  '100px') %>
-              <button>閉じる</button>
+              <%= image_tag("/images/posts/" + post.target_id + "/" + post.post_id + "/" + i.to_s + ".jpg", :width => '200px', :height =>
+                  '200px') %>
             </div>
           </div>
 
@@ -40,7 +39,7 @@
 
         <% i += 1 %>
       <% end %>
-      </div>
+    </div>
   </div>
 
 <% end %>

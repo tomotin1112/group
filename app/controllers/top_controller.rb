@@ -1,5 +1,4 @@
 class TopController < ApplicationController
-  include Common
   def index
     if request.post?
       @keyword = params[:keyword]
@@ -13,7 +12,27 @@ class TopController < ApplicationController
       and i.post_id=p.post_id
       group by target_id,post_id", session[:user]])
     end
+
     current_user
   end
 
+  def post
+    if request.post?
+      user = session[:user]
+      post = Post.where(user_id: user)
+      count = post.count()
+
+      puts(user)
+      puts(count)
+      puts(params["title"])
+      puts(Date.current.strftime("%Y-%m-%d"))
+      puts(0)
+
+      @test = Post.create(user_id: user, post_id: count, title: params["title"], date: Date.current.strftime("%Y-%m-%d"), bat_count: 0)
+      Image.create(user_id: user, post_id: count, image_id: "0", image_url: user + "/" + count.to_s + "/0.jpg",s_genru_id: "0", good_count: "0")
+      logger.debug @test.errors.inspect
+      File.binwrite("public/images/posts/#{user}/#{count.to_s}/0.jpg", params[:image].read)
+      return redirect_to :controller => 'top', :action => 'index'
+    end
+  end
 end

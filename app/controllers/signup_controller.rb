@@ -71,7 +71,7 @@ class SignupController < ApplicationController
                     birth_day: session[:birthday],register_day: session[:register_day],gender_id: session[:gender])
       #signupテーブルからcheckerで検索し、変数signupに代入
       signup = Signup.where(checker: params[:checker])
-      signup.delete_all;
+      signup.delete_all
       redirect_to :action=>'step6'
     end
 

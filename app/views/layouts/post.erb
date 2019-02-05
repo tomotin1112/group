@@ -1,0 +1,31 @@
+<div id="postmodalwin" class="modalwin hide">
+  <a herf="#" class="modal-close"></a>
+  <h1>投稿</h1>
+  <div class="modalwin-contents">
+    <%=form_tag("/", {multipart:true}) do %>
+      <label for="file_upload">ファイルを選択して下さい
+        <input type="file" id="file" name="image" onchange="$('#fake_text_box').val($(this).val())">
+        <input type="text" id="file_upload" value="ファイル選択" onClick="$('#file').click();">
+      </label>
+      <div>
+        <input type="text" id="fake_text_box" value="" size="35" readonly onClick="$('#file').click();">
+      </div>
+      <textarea name="title" rows="10" cols="60">テキストを入力</textarea>
+      <%=submit_tag "submit" %>
+  <% end %>
+  </div>
+    <!--<div>
+      <label for="file_upload">ファイルを選択して下さい
+        <input type="file" id="file" onchange="$('#fake_text_box').val($(this).val())">
+        <input type="text" id="file_upload" value="ファイル選択" onClick="$('#file').click();">
+      </label>
+    </div>
+    <div>
+      <input type="text" id="fake_text_box" value="" size="35" readonly onClick="$('#file').click();">
+    </div>
+    <textarea rows="10" cols="60">テキストを入力</textarea>
+    <br>
+    <button>閉じる</button>
+    <button>共有 +</button>
+  </div>-->
+</div>
