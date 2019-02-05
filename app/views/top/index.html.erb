@@ -3,8 +3,8 @@
     <div class="profile">
       <%= image_tag "/images/profile/test.png" %>
       <div class="name">
-        <%=link_to post.account_name,"/"+post.target_id,:class=>"account_name"%>
-        <%=link_to post.target_id,"/"+post.target_id ,:class=>"target_id"%>
+        <%=link_to post.account_name,post.target_id,:class=>"account_name"%>
+        <%=link_to post.target_id,post.target_id ,:class=>"target_id"%>
       </div>
 
     </div>
@@ -21,7 +21,6 @@
     <div class="image <%= count %>">
       <% i = 0 %>
       <% while i < post.count %>
-
         <div class="trim">
           <%=image_tag("/images/posts/" + post.target_id + "/" + post.post_id + "/" + i.to_s + ".jpg", :width => '100px', :height =>
               '100px',:class => "image-modal", data:{'id'=>post.target_id + post.post_id + i.to_s})%>
@@ -34,7 +33,6 @@
               <%= image_tag("/images/posts/" + post.target_id + "/" + post.post_id + "/" + i.to_s + ".jpg", :width => '100px', :height =>
                   '100px') %>
               <button>閉じる</button>
-
             </div>
           </div>
 
@@ -42,7 +40,7 @@
 
         <% i += 1 %>
       <% end %>
-      </div>
+    </div>
   </div>
 
 <% end %>

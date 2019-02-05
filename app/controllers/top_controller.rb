@@ -1,5 +1,4 @@
 class TopController < ApplicationController
-  include Common
   def index
     if request.post?
       @keyword = params[:keyword]
@@ -13,12 +12,8 @@ class TopController < ApplicationController
       and i.post_id=p.post_id
       group by target_id,post_id", session[:user]])
     end
-    puts("")
-    puts("top_page: "+current_user)
-    puts("")
 
-  end
-
+    current_user
 
   def post
     if request.post?
