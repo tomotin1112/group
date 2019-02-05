@@ -12,6 +12,12 @@ class UserpageController < ApplicationController
     @account_name = user_information.account_name
     @profile = user_information.profile
     @profile_image = user_information.profile_image
+    @current_user = current_user
 
+    puts("")
+    puts("user_page: "+@current_user)
+    puts("")
+    puts("user_id: "+@user_id)
+    puts("")
   end
 end

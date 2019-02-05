@@ -25,7 +25,7 @@
         <%end %>
 
         <div id="icon">
-          <%=link_to @current,:id=>"prof" do%>i
+          <%=link_to "/"+@current,:id=>"prof" do%>
             <%=image_tag 'prof.png' %>
           <%end %>
           <%=link_to "/setting",:id=>"conf" do%>
@@ -37,14 +37,7 @@
       <div id="main_menu">
 
         <%= image_tag "post.png",:class=> "post-modal" %>
-        <div id="postmodalwin" class="modalwin hide">
-          <a herf="#" class="modal-close"></a>
-          <h1>投稿</h1>
-          <div class="modalwin-contents">
-            <p>テキスト</p>
-            <button>閉じる</button>
-          </div>
-        </div>
+        <%= render template: 'layouts/post'%>
       </div>
 
   </header>

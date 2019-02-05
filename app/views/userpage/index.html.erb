@@ -1,21 +1,4 @@
-<form method="post" action="">
-  <input type="button" name = "button" value = "編集" />
-</form>
 
-  <p id = "current_user_image"><%= @profile_image %></p>
-  <ul>
-    <li> <p id = "current_user_name"><%= @account_name %></p></li>
-    <li>
-      <form method="post" action="">
-        <input type="button" name="button" value="編集"/>
-      </form>
-    </li>
-    <li><p id = "current_user_id"><%= @user_id %></p></li>
-    <li><p id = "current_user_profile"><%= @profile%></p></li>
-  </ul>
-
-
-</div>
 
 <%= stylesheet_link_tag 'userpage', media: 'all', 'data-turbolinks-track': 'reload' %>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -33,7 +16,11 @@
     <div id="b">
     <li>
       <form method="post" action="">
-        <a href="#" class="square_btn">編集</a>
+        <% if @user_id == @current_user %>
+          <a href="#" class="square_btn">編集</a>
+        <% else %>
+          <a href="#" class="square_btn">フォロー</a>
+        <% end %>
       </form>
     </li>
     </div>
