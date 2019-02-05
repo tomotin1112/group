@@ -12,6 +12,7 @@
 
   <body>
     <header>
+      <input type="file" accept="image/*">
       <ul>
         <li><%=link_to "トップ","/top" %></li>
         <li><%=link_to "ランキング","/ranking" %></li>
@@ -24,7 +25,7 @@
         <%end %>
 
         <div id="icon">
-          <%=link_to @current,:id=>"prof" do%>
+          <%=link_to @current,:id=>"prof" do%>i
             <%=image_tag 'prof.png' %>
           <%end %>
           <%=link_to "/setting",:id=>"conf" do%>
