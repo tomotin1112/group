@@ -177,6 +177,25 @@ header {
     line-height: 1.8em;
   }
 
+
+  .modalwin label {
+    color: #AAAAAA;	/* ラベルテキストの色を指定する */
+    font-size: 13px; /* ラベルテキストのサイズを指定する */
+    background-color: #006DD9;/* ラベルの背景色を指定する */
+    padding: 6px;	/* ラベルとテキスト間の余白を指定する */
+    border-radius: 10px;	/* ラベルボックスの角丸を指定する */
+    cursor:pointer;	/* マウスカーソルの形を指定する */
+  }
+
+  .modalwin label > input{
+    display:none;	/* アップロードボタンのスタイルを無効にする */
+  }
+
+  .modalwin div{
+    margin:20px;	/* ボタンとテキストボックス間の余白を指定する */
+  }
+
+
   #shade {
     position: fixed;
     left: 0;
@@ -462,16 +481,10 @@ hr {
   border-bottom: 1px solid #BBBBBB;
 }
 
-#main_area{
-  background-color: white;
-  li{
-    font-weight: bold;
-  }
-  p{
-    font-size: 15px;
-  }
-}
+
 
 #current_user_id{
   border-bottom: 1px solid #BBBBBB;
 }
+
+
