@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'userpage/index'
   get 'top', to: 'top#index'
   post 'top', to: 'top#index'
+  post '/', to: 'top#post'
 
   get '/', to: 'login#index'
   post 'login/auth'
