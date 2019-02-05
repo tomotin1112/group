@@ -17,8 +17,12 @@ class TopController < ApplicationController
     puts("top_page: "+current_user)
     puts("")
 
-
-
   end
 
+
+  def post
+    if request.post?
+      
+    end
+  end
 end
