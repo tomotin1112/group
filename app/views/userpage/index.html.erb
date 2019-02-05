@@ -16,7 +16,11 @@
     <div id="b">
     <li>
       <form method="post" action="">
-        <a href="#" class="square_btn">編集</a>
+        <% if @user_id == @current_user %>
+          <a href="#" class="square_btn">編集</a>
+        <% else %>
+          <a href="#" class="square_btn">フォロー</a>
+        <% end %>
       </form>
     </li>
     </div>

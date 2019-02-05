@@ -7,8 +7,8 @@
     <div class="profile">
       <%= image_tag "/images/profile/test.png" %>
       <div class="name">
-        <%=link_to post.account_name,post.target_id,:class=>"account_name"%>
-        <%=link_to post.target_id,post.target_id ,:class=>"target_id"%>
+        <%=link_to post.account_name,"/"+post.target_id,:class=>"account_name"%>
+        <%=link_to post.target_id,"/"+post.target_id ,:class=>"target_id"%>
       </div>
 
     </div>
