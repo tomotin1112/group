@@ -1,5 +1,4 @@
 class TopController < ApplicationController
-  include Common
   def index
     if request.post?
       @keyword = params[:keyword]

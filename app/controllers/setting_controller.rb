@@ -2,6 +2,7 @@ class SettingController < ApplicationController
 
   #ユーザー情報表示
   def index
+    current_user
     #ユーザーのレコードを検索、user_informationに格納
     #user_information = Member.where(user_id:session[:current_user])
     #user_information = UserConfig.where(user_id:"aragaki_yui")
